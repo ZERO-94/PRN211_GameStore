@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b59c62f6-6123-4fb0-8b1f-91707f14e749": {
+      "ProjectGuid": "b59c62f6-6123-4fb0-8b1f-91707f14e749",
+      "DisplayName": "BusinessObject",
+      "ColorIndex": 0
+    },
+    "2b854dec-b302-4529-8b71-6da9ea706864": {
+      "ProjectGuid": "2b854dec-b302-4529-8b71-6da9ea706864",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 1
+    },
+    "0be4fba6-5261-4aba-ade9-11b6d0f99063": {
+      "ProjectGuid": "0be4fba6-5261-4aba-ade9-11b6d0f99063",
+      "DisplayName": "GameStoreWinApp",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,11 @@
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.pdb

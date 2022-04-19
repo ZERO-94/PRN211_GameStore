@@ -1,0 +1,16 @@
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.exe
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.deps.json
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.runtimeconfig.json
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.runtimeconfig.dev.json
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.dll
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\ref\GameStoreWinApp.dll
+D:\C#\PRN211_GameStore\GameStoreWinApp\bin\Debug\net5.0-windows\GameStoreWinApp.pdb
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.csproj.AssemblyReference.cache
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.AssemblyInfoInputs.cache
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.AssemblyInfo.cs
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.csproj.CoreCompileInputs.cache
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.dll
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\ref\GameStoreWinApp.dll
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.pdb
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.genruntimeconfig.cache

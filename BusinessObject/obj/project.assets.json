@@ -5798,19 +5798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kiman\\.nuget\\packages\\": {}
+    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj",
-      "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\obj\\",
+      "projectPath": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj",
+      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+      "outputPath": "E:\\C#\\PRN211_Project\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5872,7 +5872,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

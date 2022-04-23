@@ -93,7 +93,7 @@ public class CategoryDAO
 
     }
 
-    public bool UpdateCategory(string id, Category updatedMemberInfo)
+    public bool UpdateCategory(Category updatedMemberInfo)
     {
         using (context = new GameStoreDBContext())
         {

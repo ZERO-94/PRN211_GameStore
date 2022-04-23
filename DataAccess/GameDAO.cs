@@ -6,7 +6,7 @@ public class GameDAO
 {
     private static GameDAO instance;
     private static readonly object instanceLock = new object();
-    private GameStoreDBContext context = new GameStoreDBContext();
+    private GameStoreDBContext context;
     public GameDAO()
     {
     }
@@ -27,90 +27,108 @@ public class GameDAO
         }
     }
 
-    public List<Game> GetAllGames() => context.Games.ToList<Game>();
-    public Game GetGameById(string id) => context.Games.SingleOrDefault<Game>((g) => g.Id == id);
+    public List<Game> GetAllGames()
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Games.ToList();
+        }
+    }
+
+    public Game GetGameById(string id)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Games.SingleOrDefault(x => x.Id == id);
+        }
+    }
 
     public bool CreateGame(Game newGame)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            context.Games.Add(newGame);
-            context.SaveChanges();
-            return true;
-        }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
+            try
+            {
+                context.Games.Add(newGame);
+                context.SaveChanges();
+                return true;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return false;
+            }
+            catch (DbUpdateException ex)
+            {
+                return false;
+            }
         }
     }
 
     public bool DeleteGame(string id)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            Game deletedGame = GetGameById(id);
-            if (deletedGame != null)
+            try
             {
-                context.Games.Remove(deletedGame);
-                context.SaveChanges();
-                return true;
+                Game deletedGame = context.Games.SingleOrDefault(x => x.Id == id);
+                if (deletedGame != null)
+                {
+                    context.Games.Remove(deletedGame);
+                    context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
                 return false;
             }
-        }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
+            catch (DbUpdateException ex)
+            {
+                return false;
+            }
         }
     }
 
     public bool UpdateGame(string id, Game updatedMemberInfo)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            Game updateGame = GetGameById(id);
-            if (updateGame != null)
+            try
             {
                 context.Games.Update(updatedMemberInfo);
                 context.SaveChanges();
                 return true;
+
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
                 return false;
             }
-        }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
+            catch (DbUpdateException ex)
+            {
+                return false;
+            }
         }
     }
 
     public bool DeactivateGame(string id)
     {
-        Game deActivateGame = GetGameById(id);
-        if (deActivateGame != null)
+        using (context = new GameStoreDBContext())
         {
-            deActivateGame.Status = false;
-            context.Games.Update(deActivateGame);
-            context.SaveChanges();
-            return true;
+            Game deActivateGame = context.Games.SingleOrDefault(x => x.Id == id);
+            if (deActivateGame != null)
+            {
+                deActivateGame.Status = false;
+                context.Games.Update(deActivateGame);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
         }
-        return false;
     }
 
     public List<Game> GetFilteredGameByName(string searchKey, List<Game> games)

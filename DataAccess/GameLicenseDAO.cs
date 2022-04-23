@@ -34,9 +34,9 @@ public class GameLicenseDAO
         }
     }
 
-    public List<GameLicense> GetGameLicensesListByUserID(string userID, List<GameLicense> gameLicenses)
+    public List<GameLicense> GetGameLicensesListByOrderID(string orderID, List<GameLicense> gameLicenses)
     {
-        return gameLicenses.FindAll(g => g.UserId == userID);
+        return gameLicenses.FindAll(g => g.Id == orderID);
     }
     public GameLicense GetGameLicenseByUserIDAndGameID(string userId, string gameId)
     {
@@ -46,11 +46,11 @@ public class GameLicenseDAO
         }
     }
 
-    public bool DeactivateGameLicense(string userId, string gameId)
+    public bool DeactivateGameLicense(string orderId)
     {
         using (context = new GameStoreDBContext())
         {
-            GameLicense deactivateGameLicense = context.GameLicenses.SingleOrDefault<GameLicense>((g) => g.UserId == userId && g.GameId == gameId);
+            GameLicense deactivateGameLicense = context.GameLicenses.SingleOrDefault<GameLicense>((g) => g.Id == orderId);
             if (deactivateGameLicense != null)
             {
                 deactivateGameLicense.Status = false;

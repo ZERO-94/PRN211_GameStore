@@ -93,7 +93,7 @@ public class GameDAO
         }
     }
 
-    public bool UpdateGame(string id, Game updatedMemberInfo)
+    public bool UpdateGame(Game updatedMemberInfo)
     {
         using (context = new GameStoreDBContext())
         {

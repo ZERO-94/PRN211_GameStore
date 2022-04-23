@@ -1,12 +1,26 @@
-﻿using System;
+﻿using BusinessObject.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
-    internal interface IGameRepository
+    public interface IGameRepository
     {
+        public List<Game> GetAllGames();
+
+        public Game GetGameById(string id);
+
+        public bool CreateGame(Game newGame);
+
+        public bool DeleteGame(string id);
+
+        public bool UpdateGame(Game updatedMemberInfo);
+
+        public bool DeactivateGame(string id);
+
+        public List<Game> GetFilteredGameByName(string searchKey, List<Game> games);
+
+        public List<Game> GetFilteredGameByCategory(string categoryId, List<Game> games);
+
+        public List<Game> GetFilteredGameByPriceRange(int lowerPrice, int upperPrice, List<Game> games);
     }
 }

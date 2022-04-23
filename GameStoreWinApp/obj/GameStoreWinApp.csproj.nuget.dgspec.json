@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\PRN211_Project\\GameStoreWinApp\\GameStoreWinApp.csproj": {}
+    "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj": {}
   },
   "projects": {
-    "E:\\C#\\PRN211_Project\\GameStoreWinApp\\GameStoreWinApp.csproj": {
+    "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\PRN211_Project\\GameStoreWinApp\\GameStoreWinApp.csproj",
+        "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
         "projectName": "GameStoreWinApp",
-        "projectPath": "E:\\C#\\PRN211_Project\\GameStoreWinApp\\GameStoreWinApp.csproj",
+        "projectPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
         "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\PRN211_Project\\GameStoreWinApp\\obj\\",
+        "outputPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",

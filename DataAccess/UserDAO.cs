@@ -1,4 +1,9 @@
-﻿public class UserDAO
+﻿using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+
+public class UserDAO
 {
 
     private static UserDAO instance;

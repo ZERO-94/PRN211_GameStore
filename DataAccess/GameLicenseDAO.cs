@@ -1,4 +1,8 @@
-﻿public class GameLicenseDAO
+﻿using BusinessObject.Models;
+using System.Collections.Generic;
+using System.Linq;
+
+public class GameLicenseDAO
 {
     private static GameLicenseDAO instance;
     private static readonly object instanceLock = new object();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+TuY2K6X9e15JVdAUjl/cvqS183gQAGYlyJS8b2rbaDF9p81USIZ2kpqsZlt9D4Qh9oJWrafF5DT92r3z+0sCA==",
+  "dgSpecHash": "0AXKJ/OjhHiGBAXZse6bDyt4Ck4uF02byx402SrQG9PU6IzW7laUY+m3/SMw9VsK0k1RDVZpxlyjKfDM8XD+nA==",
   "success": true,
-  "projectFilePath": "E:\\C#\\PRN211_Project\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nhan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Nhan\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -99,12 +99,5 @@
     "C:\\Users\\Nhan\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Nhan\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\C#\\PRN211_GameStore\\DataAccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

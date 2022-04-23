@@ -5725,11 +5725,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\PRN211_Project\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "E:\\C#\\PRN211_Project\\DataAccess\\DataAccess.csproj",
+      "projectPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\PRN211_Project\\DataAccess\\obj\\",
+      "outputPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5746,8 +5746,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj"
+            "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
@@ -5779,13 +5779,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\C#\\PRN211_GameStore\\DataAccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

@@ -6,7 +6,7 @@ public class CategoryDAO
 {
     private static CategoryDAO instance;
     private static readonly object instanceLock = new object();
-    private GameStoreDBContext context = new GameStoreDBContext();
+    private GameStoreDBContext context;
     public CategoryDAO()
     {
     }
@@ -27,76 +27,90 @@ public class CategoryDAO
         }
     }
 
-    public List<Category> GetAllCategories() => context.Categories.ToList<Category>();
-    public Category GetCategoryById(string id) => context.Categories.SingleOrDefault<Category>((c) => c.Id == id);
+    public List<Category> GetAllCategories()
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Categories.ToList<Category>();
+        }
+    }
+    public Category GetCategoryById(string id)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Categories.SingleOrDefault<Category>((c) => c.Id == id);
+        }
+    }
 
     public bool CreateCategory(Category newCategory)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            context.Categories.Add(newCategory);
-            context.SaveChanges();
-            return true;
-        }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
+            try
+            {
+                context.Categories.Add(newCategory);
+                context.SaveChanges();
+                return true;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return false;
+            }
+            catch (DbUpdateException ex)
+            {
+                return false;
+            }
         }
     }
 
     public bool DeleteCategory(string id)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            Category deletedCategory = GetCategoryById(id);
-            if (deletedCategory != null)
+            try
             {
-                context.Categories.Remove(deletedCategory);
-                context.SaveChanges();
-                return true;
+                Category deletedCategory = context.Categories.SingleOrDefault<Category>((c) => c.Id == id);
+                if (deletedCategory != null)
+                {
+                    context.Categories.Remove(deletedCategory);
+                    context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return false;
+            }
+            catch (DbUpdateException ex)
             {
                 return false;
             }
         }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
-        }
+
     }
 
     public bool UpdateCategory(string id, Category updatedMemberInfo)
     {
-        try
+        using (context = new GameStoreDBContext())
         {
-            Category updateCategory = GetCategoryById(id);
-            if (updateCategory != null)
+            try
             {
                 context.Categories.Update(updatedMemberInfo);
                 context.SaveChanges();
                 return true;
             }
-            else
+            catch (DbUpdateConcurrencyException ex)
             {
                 return false;
             }
-        }
-        catch (DbUpdateConcurrencyException ex)
-        {
-            return false;
-        }
-        catch (DbUpdateException ex)
-        {
-            return false;
+            catch (DbUpdateException ex)
+            {
+                return false;
+            }
         }
     }
 }

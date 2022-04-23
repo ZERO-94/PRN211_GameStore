@@ -1,9 +1,5 @@
 ﻿using BusinessObject.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
@@ -18,5 +14,11 @@ namespace DataAccess.repository
         public bool deleteUser(User newUser);
 
         public User findById(string id);
+
+        public User findByEmail(string email);
+
+        public bool ChangePassword(string id, string oldPassword, string newPassword);
+
+        public bool DeactiveAccount(string id);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccess.repository
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
         public bool createUser(User newUser);
 
@@ -20,5 +20,7 @@ namespace DataAccess.repository
         public bool ChangePassword(string id, string oldPassword, string newPassword);
 
         public bool DeactiveAccount(string id);
+
+        public User CheckLogin(string email, string password);
     }
 }

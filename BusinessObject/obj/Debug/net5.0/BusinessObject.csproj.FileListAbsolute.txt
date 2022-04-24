@@ -4,7 +4,6 @@ D:\C#\PRN211_GameStore\BusinessObject\bin\Debug\net5.0\BusinessObject.runtimecon
 D:\C#\PRN211_GameStore\BusinessObject\bin\Debug\net5.0\BusinessObject.dll
 D:\C#\PRN211_GameStore\BusinessObject\bin\Debug\net5.0\ref\BusinessObject.dll
 D:\C#\PRN211_GameStore\BusinessObject\bin\Debug\net5.0\BusinessObject.pdb
-D:\C#\PRN211_GameStore\BusinessObject\obj\Debug\net5.0\BusinessObject.csproj.AssemblyReference.cache
 D:\C#\PRN211_GameStore\BusinessObject\obj\Debug\net5.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
 D:\C#\PRN211_GameStore\BusinessObject\obj\Debug\net5.0\BusinessObject.AssemblyInfoInputs.cache
 D:\C#\PRN211_GameStore\BusinessObject\obj\Debug\net5.0\BusinessObject.AssemblyInfo.cs

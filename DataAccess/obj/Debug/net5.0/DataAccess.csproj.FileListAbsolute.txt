@@ -24,3 +24,7 @@ E:\C#\PRN211_GameStore-main\DataAccess\bin\Debug\net5.0\BusinessObject.dll
 E:\C#\PRN211_GameStore-main\DataAccess\bin\Debug\net5.0\BusinessObject.pdb
 E:\C#\PRN211_GameStore-main\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
 E:\C#\PRN211_GameStore-main\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\BusinessObject.dll
+D:\C#\PRN211_GameStore\DataAccess\bin\Debug\net5.0\BusinessObject.pdb
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\C#\PRN211_GameStore\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete

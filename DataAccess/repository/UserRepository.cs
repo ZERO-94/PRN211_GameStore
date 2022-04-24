@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace DataAccess.repository
 {
-    internal class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
-        private UserDAO userDAO;
+        private UserDAO userDAO = new UserDAO();
 
         public bool createUser(User newUser) => userDAO.CreateUser(newUser);
 
@@ -22,5 +22,7 @@ namespace DataAccess.repository
         public bool updateUser(User updateUser) => userDAO.UpdateUser(updateUser);
 
         public bool DeactiveAccount(string id) => userDAO.DeactivateAccount(id);
+
+        public User CheckLogin(string email, string password) => userDAO.CheckLogin(email, password);
     }
 }

@@ -101,8 +101,8 @@ public class UserDAO
         {
             try
             {
-                User updateUser = context.Users.SingleOrDefault(u => u.Id == id);
-                if (updateUser != null && updateUser.Password.Equals(oldPassword))
+                User updateUser = context.Users.SingleOrDefault(u => u.Id == id && u.Password.Equals(oldPassword));
+                if (updateUser != null)
                 {
                     updateUser.Password = newPassword;
                     context.Users.Update(updateUser);

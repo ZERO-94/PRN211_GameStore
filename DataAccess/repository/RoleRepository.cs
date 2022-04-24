@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
-    internal class RoleRepository
+    public class RoleRepository
     {
     }
 }

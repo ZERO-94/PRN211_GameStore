@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace GameStoreWinApp
 {
-    public partial class Form1 : Form
+    public partial class frmGameLicense : UserControl
     {
-        public Form1()
+        public frmGameLicense()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C6mCU6Tjr0+QUQvOHnWDlzUINKUyhTU8yGrs32UgHdEf/2sjZSxPMmnLp+P8Sh4Lbak3kejZngBw+iiOMydWtQ==",
+  "dgSpecHash": "VChpKwKzhdnXMxk0N03sZEop+rBNpqLM+shUT8ije8FtkJBVw2uOO1leN5PthRbe12vaUVO5jGNO0OlKIOHQug==",
   "success": true,
-  "projectFilePath": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nhan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Nhan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

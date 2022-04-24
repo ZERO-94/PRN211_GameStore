@@ -1,8 +1,6 @@
-﻿using System;
-
-public class RoleDAO
+﻿public class RoleDAO
 {
-	public RoleDAO()
-	{
-	}
+    public RoleDAO()
+    {
+    }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj": {}
+    "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj": {
+    "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "E:\\C#\\PRN211_Project\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\PRN211_Project\\BusinessObject\\obj\\",
+        "outputPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",

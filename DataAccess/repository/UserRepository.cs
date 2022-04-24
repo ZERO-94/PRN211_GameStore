@@ -1,58 +1,26 @@
 ﻿using BusinessObject.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
     internal class UserRepository : IUserRepository
     {
-        private static UserRepository instance;
-        private static readonly object instanceLock = new object();
-        private GameStoreDBContext dbContext = new GameStoreDBContext();
+        private UserDAO userDAO;
 
-        public static UserRepository Instance //singleton for DAO
-        {
-            get
-            {
-                lock(instanceLock)
-                {
-                    if(instance == null)
-                    {
-                        instance = new UserRepository();
-                    }
+        public bool createUser(User newUser) => userDAO.CreateUser(newUser);
 
-                    return instance;
-                }    
-            }
-        }
+        public bool deleteUser(User deleteUser) => userDAO.DeleteUser(deleteUser);
 
-        public bool createUser(User newUser)
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<User> findAll() => userDAO.GetAllUsers();
 
-        public bool deleteUser(User newUser)
-        {
-            throw new NotImplementedException();
-        }
+        public User findById(string id) => userDAO.GetUserById(id);
 
-        public IEnumerable<User> findAll()
-        {
-            return dbContext.Users.ToList();
-        }
+        public User findByEmail(string email) => userDAO.GetUserByEmail(email);
 
-        public User findById(string id)
-        {
-            User user = dbContext.Users.Find(id);
-            return user;
-        }
+        public bool ChangePassword(string id, string oldPassword, string newPassword) => userDAO.ChangePassword(id, oldPassword, newPassword);
 
-        public bool updateUser(User newUser)
-        {
-            throw new NotImplementedException();
-        }
+        public bool updateUser(User updateUser) => userDAO.UpdateUser(updateUser);
+
+        public bool DeactiveAccount(string id) => userDAO.DeactivateAccount(id);
     }
 }

@@ -5720,19 +5720,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kiman\\.nuget\\packages\\": {}
+    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\obj\\",
+      "projectPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+      "outputPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5746,8 +5746,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj"
+            "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
@@ -5776,16 +5776,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\C#\\PRN211_GameStore\\DataAccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

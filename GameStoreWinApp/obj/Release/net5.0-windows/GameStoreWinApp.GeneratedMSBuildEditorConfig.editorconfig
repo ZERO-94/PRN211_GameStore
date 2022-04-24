@@ -13,4 +13,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GameStoreWinApp
-build_property.ProjectDir = E:\C#\PRN211_Project\GameStoreWinApp\
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\Nhan\Source\Repos\PRN211_GameStore\GameStoreWinApp\
+=======
+build_property.ProjectDir = E:\C#\PRN211_GameStore-main\GameStoreWinApp\
+>>>>>>> dbc8284f1a55493aac5d800d754c09d3e7bee781

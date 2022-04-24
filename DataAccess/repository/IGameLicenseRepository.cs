@@ -1,12 +1,15 @@
-﻿using System;
+﻿using BusinessObject.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
-    internal interface IGameLicenseRepository
+    public interface IGameLicenseRepository
     {
+        public List<GameLicense> GetAllGameLicenses();
+
+        public List<GameLicense> GetGameLicensesListByOrderID(string orderID, List<GameLicense> gameLicenses);
+
+        public GameLicense GetGameLicenseByUserIDAndGameID(string userId, string gameId);
+        public bool DeactivateGameLicense(string orderId);
     }
 }

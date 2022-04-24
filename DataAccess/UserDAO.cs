@@ -53,15 +53,20 @@ public class UserDAO
 
     }
 
-    public bool DeleteUser(User deletedUser)
+    public bool DeleteUser(string deleteId)
     {
         using (context = new GameStoreDBContext())
         {
             try
             {
-                context.Users.Remove(deletedUser);
-                context.SaveChanges();
-                return true;
+                User user = context.Users.FirstOrDefault(x => x.Id == deleteId);
+                if (user != null)
+                {
+                    context.Users.Remove(user);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -101,8 +106,8 @@ public class UserDAO
         {
             try
             {
-                User updateUser = context.Users.SingleOrDefault(u => u.Id == id);
-                if (updateUser != null && updateUser.Password.Equals(oldPassword))
+                User updateUser = context.Users.SingleOrDefault(u => u.Id == id && u.Password.Equals(oldPassword));
+                if (updateUser != null)
                 {
                     updateUser.Password = newPassword;
                     context.Users.Update(updateUser);
@@ -130,7 +135,7 @@ public class UserDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Users.SingleOrDefault<User>((u) => u.Id == id);
+            return context.Users.Include(u => u.Role).SingleOrDefault<User>((u) => u.Id == id);
         }
     }
 
@@ -138,7 +143,7 @@ public class UserDAO
     {
          using (context = new GameStoreDBContext())
         {
-            return context.Users.ToList();
+            return context.Users.Include(u => u.Role).ToList();
         }
     }
 
@@ -146,7 +151,7 @@ public class UserDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Users.SingleOrDefault<User>(m => m.Email.Equals(email) && m.Password.Equals(password));
+            return context.Users.Include(u => u.Role).SingleOrDefault<User>(m => m.Email.Equals(email) && m.Password.Equals(password));
         }
     }
 
@@ -166,11 +171,27 @@ public class UserDAO
         }
     }
 
+    public bool ActivateAccount(string id)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            User deActivateUser = context.Users.SingleOrDefault<User>((u) => u.Id == id);
+            if (deActivateUser != null)
+            {
+                deActivateUser.Status = true;
+                context.Users.Update(deActivateUser);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+    }
+
     public User GetUserByEmail(string email)
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Users.SingleOrDefault<User>((m) => m.Email.Equals(email));
+            return context.Users.Include(u => u.Role).SingleOrDefault<User>((m) => m.Email.Equals(email));
         }
     }
 }

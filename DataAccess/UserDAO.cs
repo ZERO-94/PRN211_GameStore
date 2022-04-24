@@ -136,7 +136,7 @@ public class UserDAO
 
     public List<User> GetAllUsers()
     {
-
+         using (context = new GameStoreDBContext())
         {
             return context.Users.ToList();
         }

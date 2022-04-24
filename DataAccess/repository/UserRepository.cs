@@ -9,9 +9,9 @@ namespace DataAccess.repository
 
         public bool createUser(User newUser) => userDAO.CreateUser(newUser);
 
-        public bool deleteUser(User deleteUser) => userDAO.DeleteUser(deleteUser);
+        public bool deleteUser(string deleteId) => userDAO.DeleteUser(deleteId);
 
-        public IEnumerable<User> findAll() => userDAO.GetAllUsers();
+        public List<User> findAll() => userDAO.GetAllUsers();
 
         public User findById(string id) => userDAO.GetUserById(id);
 
@@ -22,6 +22,8 @@ namespace DataAccess.repository
         public bool updateUser(User updateUser) => userDAO.UpdateUser(updateUser);
 
         public bool DeactiveAccount(string id) => userDAO.DeactivateAccount(id);
+
+        public bool ActiveAccount(string id) => userDAO.ActivateAccount(id);
 
         public User CheckLogin(string email, string password) => userDAO.CheckLogin(email, password);
     }

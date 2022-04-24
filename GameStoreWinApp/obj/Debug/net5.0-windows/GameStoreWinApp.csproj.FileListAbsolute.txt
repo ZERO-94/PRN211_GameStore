@@ -74,3 +74,7 @@ D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.
 D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmMain.resources
 D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.csproj.CopyComplete
 D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmMyProfile.resources
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmAccount.resources
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmAccountDetail.resources
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmGame.resources
+D:\C#\PRN211_GameStore\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmGameLicense.resources

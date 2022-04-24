@@ -35,6 +35,7 @@
             this.myProfileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frmMyProfile1 = new GameStoreWinApp.frmMyProfile();
+            this.frmAccount1 = new GameStoreWinApp.frmAccount();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,12 +64,14 @@
             this.accountManagementMenuItem.Name = "accountManagementMenuItem";
             this.accountManagementMenuItem.Size = new System.Drawing.Size(138, 20);
             this.accountManagementMenuItem.Text = "Account management";
+            this.accountManagementMenuItem.Click += new System.EventHandler(this.accountManagementMenuItem_Click);
             // 
             // gameLicensesMenuItem
             // 
             this.gameLicensesMenuItem.Name = "gameLicensesMenuItem";
             this.gameLicensesMenuItem.Size = new System.Drawing.Size(97, 20);
             this.gameLicensesMenuItem.Text = "Game Licenses";
+            this.gameLicensesMenuItem.Click += new System.EventHandler(this.gameLicensesMenuItem_Click);
             // 
             // myProfileMenuItem
             // 
@@ -92,11 +95,20 @@
             this.frmMyProfile1.TabIndex = 1;
             this.frmMyProfile1.Visible = false;
             // 
+            // frmAccount1
+            // 
+            this.frmAccount1.Location = new System.Drawing.Point(12, 27);
+            this.frmAccount1.Name = "frmAccount1";
+            this.frmAccount1.Size = new System.Drawing.Size(776, 411);
+            this.frmAccount1.TabIndex = 2;
+            this.frmAccount1.Visible = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.frmAccount1);
             this.Controls.Add(this.frmMyProfile1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -119,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem myProfileMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private frmMyProfile frmMyProfile1;
+        private frmAccount frmAccount1;
     }
 }

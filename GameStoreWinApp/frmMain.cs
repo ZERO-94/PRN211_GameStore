@@ -28,12 +28,12 @@ namespace GameStoreWinApp
         {
             if(user.RoleId == 2) //is Admin
             {
-                myProfileMenuItem.Enabled = false;
+                myProfileMenuItem.Visible = false;
                 accountManagementMenuItem.Visible = true;
 
             } else if (user.RoleId == 1) //is Customer
             {
-                myProfileMenuItem.Enabled = true;
+                myProfileMenuItem.Visible = true;
                 accountManagementMenuItem.Visible = false;
             }
         }
@@ -47,8 +47,20 @@ namespace GameStoreWinApp
 
         private void myProfileMenuItem_Click(object sender, EventArgs e)
         {
+            frmAccount1.Hide();
             frmMyProfile1.Show();
             frmMyProfile1.load(user);
+        }
+
+        private void accountManagementMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAccount1.Show();
+            frmAccount1.load();
+        }
+
+        private void gameLicensesMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

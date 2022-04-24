@@ -1,12 +1,18 @@
-﻿using System;
+﻿using BusinessObject.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.repository
 {
-    internal interface Interface1
+    public interface ICategoryRepository
     {
+        public List<Category> GetAllCategories();
+
+        public Category GetCategoryById(string id);
+
+        public bool CreateCategory(Category newCategory);
+
+        public bool DeleteCategory(string id);
+
+        public bool UpdateCategory(Category updatedMemberInfo);
     }
 }

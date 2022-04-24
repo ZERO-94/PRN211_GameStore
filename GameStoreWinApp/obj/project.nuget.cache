@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nbbmSMZ4WSy71gntfWerjnY4S2Wtz2n9mujppzgwIT+tUTS+xVV1R9BLTd3KusM7e6ff5zWKS9Fyytj8CEwMwQ==",
+  "dgSpecHash": "VCNuzN7NoNV3H123/Lm12LoRU0Ok2hLaAdjlnszQOkle1HtPx6RaWPPu0UJk/8WqzGXR1+QVwYaRme1t7g6vww==",
   "success": true,
-  "projectFilePath": "E:\\C#\\PRN211_Project\\GameStoreWinApp\\GameStoreWinApp.csproj",
+  "projectFilePath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

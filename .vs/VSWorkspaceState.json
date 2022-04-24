@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BusinessObject",
-    "\\BusinessObject\\Models",
     "\\DataAccess"
   ],
-  "SelectedNode": "\\BusinessObject\\Models\\GameStoreDBContext.cs",
   "PreviewInSolutionExplorer": false
 }

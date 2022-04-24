@@ -149,7 +149,6 @@
             // 
             // btnActiveAndDeactive
             // 
-            this.btnActiveAndDeactive.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnActiveAndDeactive.Location = new System.Drawing.Point(515, 7);
             this.btnActiveAndDeactive.Name = "btnActiveAndDeactive";
             this.btnActiveAndDeactive.Size = new System.Drawing.Size(75, 23);

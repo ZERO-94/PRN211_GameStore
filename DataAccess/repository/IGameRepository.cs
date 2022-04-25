@@ -22,5 +22,7 @@ namespace DataAccess.repository
         public List<Game> GetFilteredGameByCategory(string categoryId, List<Game> games);
 
         public List<Game> GetFilteredGameByPriceRange(int lowerPrice, int upperPrice, List<Game> games);
+
+        public List<Game> SearchGame(string? searchId, string? searchName, string? category, decimal? searchLowerPrice, decimal? searchHigherPrice);
     }
 }

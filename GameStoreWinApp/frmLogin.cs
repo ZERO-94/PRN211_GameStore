@@ -1,7 +1,6 @@
 ﻿
 using BusinessObject.Models;
 using DataAccess.repository;
-using GameStoreWinApp;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -19,14 +18,15 @@ namespace GameStoreWinApp
 
         private void tbEmail_Validating(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(tbEmail.Text))
+            if (string.IsNullOrWhiteSpace(tbEmail.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(tbEmail, "Email can't be blank!");
-            } else
+            }
+            else
             {
-                e.Cancel= false;
-                errorProvider1.SetError(tbEmail,"");
+                e.Cancel = false;
+                errorProvider1.SetError(tbEmail, "");
             }
         }
 
@@ -46,15 +46,16 @@ namespace GameStoreWinApp
 
         private void login_Click(object sender, EventArgs e)
         {
-            if(ValidateChildren(ValidationConstraints.Enabled))
+            if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                
+
                 User authenticatedUser = userRepository.CheckLogin(tbEmail.Text.Trim(), tbPassword.Text.Trim());
                 if (authenticatedUser != null)
                 {
                     //redirect to new screen
                     RedirectToForm(authenticatedUser);
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Invalid account!");
                 }
@@ -73,7 +74,7 @@ namespace GameStoreWinApp
             this.Hide();
 
             frmMain frmMain = new frmMain(user, this);
-            this.FormClosed += (s, e) => frmMain.Close();
+            //this.FormClosed += (s, e) => frmMain.Close();
             frmMain.FormClosed += (s, e) => this.Close();
             frmMain.Show();
 

@@ -50,53 +50,56 @@
             // lbOperation
             // 
             this.lbOperation.AutoSize = true;
-            this.lbOperation.Location = new System.Drawing.Point(6, 7);
+            this.lbOperation.Location = new System.Drawing.Point(7, 9);
             this.lbOperation.Name = "lbOperation";
-            this.lbOperation.Size = new System.Drawing.Size(58, 15);
+            this.lbOperation.Size = new System.Drawing.Size(74, 20);
             this.lbOperation.TabIndex = 42;
             this.lbOperation.Text = "operation";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(166, 260);
+            this.lbPassword.Location = new System.Drawing.Point(190, 347);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(57, 15);
+            this.lbPassword.Size = new System.Drawing.Size(70, 20);
             this.lbPassword.TabIndex = 41;
             this.lbPassword.Text = "Password";
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(166, 278);
+            this.tbPassword.Location = new System.Drawing.Point(190, 371);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(263, 23);
+            this.tbPassword.Size = new System.Drawing.Size(300, 27);
             this.tbPassword.TabIndex = 40;
             this.tbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbPassword_Validating);
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(166, 50);
+            this.lbId.Location = new System.Drawing.Point(190, 67);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(18, 15);
+            this.lbId.Size = new System.Drawing.Size(24, 20);
             this.lbId.TabIndex = 39;
             this.lbId.Text = "ID";
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(166, 68);
+            this.tbId.Location = new System.Drawing.Point(190, 91);
+            this.tbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(263, 23);
+            this.tbId.Size = new System.Drawing.Size(300, 27);
             this.tbId.TabIndex = 38;
             this.tbId.Validating += new System.ComponentModel.CancelEventHandler(this.tbId_Validating);
             // 
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(273, 320);
+            this.btnOK.Location = new System.Drawing.Point(312, 427);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(86, 31);
             this.btnOK.TabIndex = 37;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -105,27 +108,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 154);
+            this.label2.Location = new System.Drawing.Point(190, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 34;
             this.label2.Text = "Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 104);
+            this.label1.Location = new System.Drawing.Point(190, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 15);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "Email";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(354, 320);
+            this.btnCancel.Location = new System.Drawing.Point(405, 427);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(86, 31);
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -133,25 +137,28 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(166, 172);
+            this.tbUsername.Location = new System.Drawing.Point(190, 229);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(263, 23);
+            this.tbUsername.Size = new System.Drawing.Size(300, 27);
             this.tbUsername.TabIndex = 29;
             this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.tbUsername_Validating);
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(166, 122);
+            this.tbEmail.Location = new System.Drawing.Point(190, 163);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(263, 23);
+            this.tbEmail.Size = new System.Drawing.Size(300, 27);
             this.tbEmail.TabIndex = 28;
             this.tbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.tbEmail_Validating);
             // 
             // btnActiveAndDeactive
             // 
-            this.btnActiveAndDeactive.Location = new System.Drawing.Point(515, 7);
+            this.btnActiveAndDeactive.Location = new System.Drawing.Point(589, 9);
+            this.btnActiveAndDeactive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActiveAndDeactive.Name = "btnActiveAndDeactive";
-            this.btnActiveAndDeactive.Size = new System.Drawing.Size(75, 23);
+            this.btnActiveAndDeactive.Size = new System.Drawing.Size(86, 31);
             this.btnActiveAndDeactive.TabIndex = 43;
             this.btnActiveAndDeactive.Text = "Deactive";
             this.btnActiveAndDeactive.UseVisualStyleBackColor = true;
@@ -160,18 +167,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 207);
+            this.label3.Location = new System.Drawing.Point(190, 276);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
+            this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 45;
             this.label3.Text = "Role";
             // 
             // cbRole
             // 
             this.cbRole.FormattingEnabled = true;
-            this.cbRole.Location = new System.Drawing.Point(166, 225);
+            this.cbRole.Location = new System.Drawing.Point(190, 300);
+            this.cbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbRole.Name = "cbRole";
-            this.cbRole.Size = new System.Drawing.Size(263, 23);
+            this.cbRole.Size = new System.Drawing.Size(300, 28);
             this.cbRole.TabIndex = 46;
             // 
             // errorProvider1
@@ -180,10 +188,10 @@
             // 
             // frmAccountDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(602, 372);
+            this.ClientSize = new System.Drawing.Size(688, 496);
             this.Controls.Add(this.cbRole);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnActiveAndDeactive);
@@ -198,6 +206,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.tbEmail);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAccountDetail";
             this.Text = "frmAccountDetail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAccountDetail_FormClosing);

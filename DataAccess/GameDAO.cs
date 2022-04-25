@@ -146,4 +146,17 @@ public class GameDAO
     {
         return games.FindAll(g => g.Price >= lowerPrice && g.Price <= upperPrice);
     }
+
+    public List<Game> SearchGame(string? searchId, string? searchName, string? category, decimal? searchLowerPrice, decimal? searchHigherPrice)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Games.Where(game => searchId == null || game.Id == searchId)
+            .Where(game => searchName == null || game.Name.Contains(searchName))
+            .Where(game => category == null || game.Category.Name == category)
+            .Where(game => searchLowerPrice == null || game.Price >= searchLowerPrice)
+            .Where(game => searchHigherPrice == null || game.Price <= searchHigherPrice)
+            .ToList();
+        }
+    }
 }

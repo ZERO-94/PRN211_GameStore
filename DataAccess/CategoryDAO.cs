@@ -33,7 +33,7 @@ public class CategoryDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Categories.ToList<Category>();
+            return context.Categories.ToList();
         }
     }
     public Category GetCategoryById(string id)
@@ -42,6 +42,25 @@ public class CategoryDAO
         {
             return context.Categories.SingleOrDefault<Category>((c) => c.Id == id);
         }
+    }
+
+    public Category GetCategoryIdByName(string name)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Categories.SingleOrDefault<Category>((c) => c.Name == name);
+        }
+    }
+
+    public List<string> getCategoryNameList()
+    {
+        var categoryList = GetAllCategories();
+        List<string> categoryNameList = new List<string>();
+        foreach (Category c in categoryList)
+        {
+            categoryNameList.Add(c.Name);
+        }
+        return categoryNameList;
     }
 
     public bool CreateCategory(Category newCategory)

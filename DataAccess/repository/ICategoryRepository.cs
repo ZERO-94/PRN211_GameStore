@@ -9,10 +9,14 @@ namespace DataAccess.repository
 
         public Category GetCategoryById(string id);
 
+        public List<string> getCategoryNameList();
+
         public bool CreateCategory(Category newCategory);
 
         public bool DeleteCategory(string id);
 
         public bool UpdateCategory(Category updatedMemberInfo);
+
+        public Category GetCategoryIdByName(string name);
     }
 }

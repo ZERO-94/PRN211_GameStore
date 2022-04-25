@@ -20,7 +20,7 @@ namespace GameStoreWinApp
             categoryReposity = new CategoryRepository();
         }
 
-        private delegate List<Game> TableFilter(List<Game> productList);
+        private delegate List<Game> TableFilter(List<Game> GameList);
 
         private void loadTableData(TableFilter filter)
         {
@@ -88,7 +88,7 @@ namespace GameStoreWinApp
 
                 if (formGameForAdmin.ShowDialog() == DialogResult.OK)
                 {
-                    //create product
+                    //create Game
                     Game gameObject = formGameForAdmin.GetGameObject();
 
                     bool createRes = gameRepository.CreateGame(gameObject);
@@ -104,6 +104,69 @@ namespace GameStoreWinApp
                 });
             }
 
+        }
+
+        private void updateGame_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string updateId = (string)gameContainer.Rows[gameContainer.CurrentCell.RowIndex].Cells[0].Value;
+
+                if (updateId != null)
+                {
+                    Game updateGame = gameRepository.GetGameById(updateId);
+                    frmGameForAdmin frmGameForAdmin = new frmGameForAdmin("update", updateGame);
+
+                    if (frmGameForAdmin.ShowDialog() == DialogResult.OK)
+                    {
+                        //create Game
+                        Game GameObject = frmGameForAdmin.GetGameObject();
+
+                        bool updateRes = gameRepository.UpdateGame(GameObject);
+                        if (updateRes) MessageBox.Show("Update successfully");
+                        else MessageBox.Show("Failed to update");
+                    }
+                }
+            }
+            finally
+            {
+                loadTableData(delegate (List<Game> list)
+                {
+                    return list;
+                });
+            }
+        }
+
+        private void deleteGame_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string deleteId = (string)gameContainer.Rows[gameContainer.CurrentCell.RowIndex].Cells[0].Value;
+
+                if (deleteId != null)
+                {
+                    bool deleteRes = gameRepository.DeleteGame(deleteId);
+                    if (deleteRes)
+                    {
+                        MessageBox.Show("Delete successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("There is problem, try again!");
+                }
+            }
+            finally
+            {
+                loadTableData(delegate (List<Game> list)
+                {
+                    return list;
+                });
+            }
         }
     }
 }

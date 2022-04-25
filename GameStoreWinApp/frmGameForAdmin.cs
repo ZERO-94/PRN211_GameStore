@@ -48,7 +48,7 @@ namespace GameStoreWinApp
                     game.Name = txtName.Text.Trim();
                     game.Description = txtDescription.Text.Trim();
                     game.Status = Convert.ToBoolean(txtStatus.Text);
-                    game.Price = Convert.ToInt32(txtPrice);
+                    game.Price = Convert.ToInt32(txtPrice.Text);
 
                     return game;
                 }

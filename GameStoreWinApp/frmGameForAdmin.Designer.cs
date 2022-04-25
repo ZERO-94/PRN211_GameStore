@@ -160,7 +160,7 @@
             this.addBtn_Game.Name = "addBtn_Game";
             this.addBtn_Game.Size = new System.Drawing.Size(94, 29);
             this.addBtn_Game.TabIndex = 13;
-            this.addBtn_Game.Text = "Add";
+            this.addBtn_Game.Text = "OK";
             this.addBtn_Game.UseVisualStyleBackColor = true;
             this.addBtn_Game.Click += new System.EventHandler(this.addBtn_Game_Click);
             // 

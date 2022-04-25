@@ -145,6 +145,7 @@
             this.deleteGame.TabIndex = 23;
             this.deleteGame.Text = "Delete";
             this.deleteGame.UseVisualStyleBackColor = true;
+            this.deleteGame.Click += new System.EventHandler(this.deleteGame_Click);
             // 
             // updateGame
             // 
@@ -155,6 +156,7 @@
             this.updateGame.TabIndex = 22;
             this.updateGame.Text = "Update";
             this.updateGame.UseVisualStyleBackColor = true;
+            this.updateGame.Click += new System.EventHandler(this.updateGame_Click);
             // 
             // gameContainer
             // 

@@ -22,8 +22,8 @@ namespace DataAccess.repository
 
         public bool CreateCategory(Category newCategory) => categoryDAO.CreateCategory(newCategory);
 
-        public bool DeleteCategory(string id) => categoryDAO.DeleteCategory(id);
+        public bool DeleteCategory(Category category) => categoryDAO.DeleteCategory(category);
 
-        public bool UpdateCategory(Category updatedMemberInfo) => categoryDAO.UpdateCategory(updatedMemberInfo);
+        public bool UpdateCategory(Category category) => categoryDAO.UpdateCategory(category);
     }
 }

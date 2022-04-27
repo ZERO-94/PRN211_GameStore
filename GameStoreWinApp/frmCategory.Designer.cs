@@ -38,13 +38,14 @@
             this.createBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoryContainer)).BeginInit();
             this.SuspendLayout();
             // 
             // categoryContainer
             // 
             this.categoryContainer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoryContainer.Location = new System.Drawing.Point(230, 95);
+            this.categoryContainer.Location = new System.Drawing.Point(233, 118);
             this.categoryContainer.Name = "categoryContainer";
             this.categoryContainer.RowHeadersWidth = 51;
             this.categoryContainer.RowTemplate.Height = 29;
@@ -54,7 +55,7 @@
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(23, 95);
+            this.idLabel.Location = new System.Drawing.Point(26, 118);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(24, 20);
             this.idLabel.TabIndex = 1;
@@ -62,14 +63,14 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(23, 130);
+            this.txtID.Location = new System.Drawing.Point(26, 153);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(160, 27);
             this.txtID.TabIndex = 2;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(23, 223);
+            this.txtName.Location = new System.Drawing.Point(26, 246);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(160, 27);
             this.txtName.TabIndex = 4;
@@ -77,7 +78,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(23, 188);
+            this.nameLabel.Location = new System.Drawing.Point(26, 211);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(49, 20);
             this.nameLabel.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(23, 312);
+            this.txtDescription.Location = new System.Drawing.Point(26, 335);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(160, 27);
             this.txtDescription.TabIndex = 6;
@@ -93,7 +94,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(23, 277);
+            this.label.Location = new System.Drawing.Point(26, 300);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(85, 20);
             this.label.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(53, 357);
+            this.createBtn.Location = new System.Drawing.Point(56, 380);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(94, 29);
             this.createBtn.TabIndex = 7;
@@ -111,7 +112,7 @@
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(53, 404);
+            this.updateBtn.Location = new System.Drawing.Point(56, 424);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(94, 29);
             this.updateBtn.TabIndex = 8;
@@ -121,7 +122,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(53, 446);
+            this.deleteBtn.Location = new System.Drawing.Point(56, 469);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(94, 29);
             this.deleteBtn.TabIndex = 9;
@@ -129,10 +130,21 @@
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(167, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(503, 60);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Category Management";
+            // 
             // frmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.createBtn);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

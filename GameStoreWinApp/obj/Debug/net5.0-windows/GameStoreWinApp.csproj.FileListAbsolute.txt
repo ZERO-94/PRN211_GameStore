@@ -81,3 +81,4 @@ E:\C#\PRN211_GameStore-main\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWi
 E:\C#\PRN211_GameStore-main\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmGameForAdmin.resources
 E:\C#\PRN211_GameStore-main\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmCategory.resources
 E:\C#\PRN211_GameStore-main\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.frmConfirm.resources
+E:\C#\PRN211_GameStore-main\GameStoreWinApp\obj\Debug\net5.0-windows\GameStoreWinApp.PreviewGameLicense.resources

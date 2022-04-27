@@ -13,9 +13,9 @@ namespace DataAccess.repository
 
         public bool CreateCategory(Category newCategory);
 
-        public bool DeleteCategory(string id);
+        public bool DeleteCategory(Category category);
 
-        public bool UpdateCategory(Category updatedMemberInfo);
+        public bool UpdateCategory(Category category);
 
         public Category GetCategoryIdByName(string name);
     }

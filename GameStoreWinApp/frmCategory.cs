@@ -11,6 +11,8 @@ namespace GameStoreWinApp
     {
         private GameRepository gameRepository;
         private CategoryRepository categoryReposity;
+        frmConfirm formConfirm;
+        public string operation;
         public frmCategory()
         {
             InitializeComponent();
@@ -81,6 +83,7 @@ namespace GameStoreWinApp
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            operation = "update";
             string searchId = txtID.Text.Trim();
             string searchName = txtName.Text.Trim();
             string searchDescription = txtDescription.Text.Trim();
@@ -101,9 +104,8 @@ namespace GameStoreWinApp
                         Name = searchName,
                         Description = searchDescription,
                     };
-
-                    categoryReposity.UpdateCategory(category);
-                    MessageBox.Show("Update successfully");
+                    formConfirm = new frmConfirm(this, category, operation);
+                    formConfirm.ShowDialog();
                     load();
                 }
                 else
@@ -115,21 +117,17 @@ namespace GameStoreWinApp
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
+            operation = "delete";
             try
             {
                 string deleteId = (string)categoryContainer.Rows[categoryContainer.CurrentCell.RowIndex].Cells[0].Value;
 
                 if (deleteId != null)
                 {
-                    bool deleteRes = categoryReposity.DeleteCategory(deleteId);
-                    if (deleteRes)
-                    {
-                        MessageBox.Show("Delete successfully");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to delete");
-                    }
+                    var category = categoryReposity.GetCategoryById(deleteId);
+                    formConfirm = new frmConfirm(this, category, operation);
+                    formConfirm.ShowDialog();
+                    load();
                 }
                 else
                 {

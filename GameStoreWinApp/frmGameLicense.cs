@@ -24,36 +24,51 @@ namespace GameStoreWinApp
 
         private delegate List<GameLicense> TableFilter(List<GameLicense> GameList);
 
+        public void setUser(User user)
+        {
+            currentUser = user;
+        }
         private void loadTableData(TableFilter filter)
         {
             DataTable gameLicenseTable = new DataTable();
-            gameLicenseTable.Columns.Add("ID");
-            gameLicenseTable.Columns.Add("UserID");
-            gameLicenseTable.Columns.Add("Username");
-            gameLicenseTable.Columns.Add("GameID");
-            gameLicenseTable.Columns.Add("Game Name");
-            gameLicenseTable.Columns.Add("Buy Time");
-            gameLicenseTable.Columns.Add("Status");
+
 
             List<GameLicense> gameLicenses = new List<GameLicense>();
+            //load data
             if (currentUser.RoleId == 1)
             {
+                gameLicenseTable.Columns.Add("Username");
+                gameLicenseTable.Columns.Add("Game Name");
+                gameLicenseTable.Columns.Add("Buy Time");
                 gameLicenses = gameLicenseRepository.GetGameLicensesListByUserID(currentUser.Id, gameLicenseRepository.GetAllGameLicenses());
+                List<GameLicense> gamesLicenseAfterFilter = filter(gameLicenses);
+
+                foreach (GameLicense gameLicense in gamesLicenseAfterFilter)
+                {
+                    gameLicenseTable.Rows.Add(gameLicense.User.Username, gameLicense.Game.Name, gameLicense.BuyTime);
+                }
             }
             else
             {
+                gameLicenseTable.Columns.Add("ID");
+                gameLicenseTable.Columns.Add("UserID");
+                gameLicenseTable.Columns.Add("Username");
+                gameLicenseTable.Columns.Add("GameID");
+                gameLicenseTable.Columns.Add("Game Name");
+                gameLicenseTable.Columns.Add("Buy Time");
+                gameLicenseTable.Columns.Add("Status");
                 gameLicenses = gameLicenseRepository.GetAllGameLicenses();
+
+                List<GameLicense> gamesLicenseAfterFilter = filter(gameLicenses);
+
+                foreach (GameLicense gameLicense in gamesLicenseAfterFilter)
+                {
+                    gameLicenseTable.Rows.Add(gameLicense.Id, gameLicense.UserId, gameLicense.User.Username, gameLicense.GameId, gameLicense.Game.Name, gameLicense.BuyTime, gameLicense.Status);
+                }
             }
-            //load data
-            gameLicenses = gameLicenseRepository.GetAllGameLicenses();
 
             //filter in here
-            List<GameLicense> gamesLicenseAfterFilter = filter(gameLicenses);
 
-            foreach (GameLicense gameLicense in gamesLicenseAfterFilter)
-            {
-                gameLicenseTable.Rows.Add(gameLicense.Id, gameLicense.UserId, gameLicense.User.Username, gameLicense.GameId, gameLicense.Game.Name, gameLicense.BuyTime, gameLicense.Status);
-            }
 
             gameLicenseContainer.DataSource = gameLicenseTable;
 
@@ -84,11 +99,6 @@ namespace GameStoreWinApp
             {
                 return list; //get all
             });
-        }
-
-        private void frmGameLicense_Load(object sender, EventArgs e)
-        {
-            load();
         }
 
         private void refreshBtn_Click(object sender, EventArgs e)

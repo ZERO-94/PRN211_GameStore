@@ -38,6 +38,8 @@
             this.frmAccount1 = new GameStoreWinApp.frmAccount();
             this.frmGame1 = new GameStoreWinApp.frmGame();
             this.frmGameLicense1 = new GameStoreWinApp.frmGameLicense();
+            this.frmCategory1 = new GameStoreWinApp.frmCategory();
+            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,96 +48,117 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameMenuItem,
+            this.categoryToolStripMenuItem,
             this.accountManagementMenuItem,
             this.gameLicensesMenuItem,
             this.myProfileMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(914, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gameMenuItem
             // 
             this.gameMenuItem.Name = "gameMenuItem";
-            this.gameMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.gameMenuItem.Size = new System.Drawing.Size(62, 24);
             this.gameMenuItem.Text = "Game";
             this.gameMenuItem.Click += new System.EventHandler(this.gameMenuItem_Click);
             // 
             // accountManagementMenuItem
             // 
             this.accountManagementMenuItem.Name = "accountManagementMenuItem";
-            this.accountManagementMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.accountManagementMenuItem.Size = new System.Drawing.Size(169, 24);
             this.accountManagementMenuItem.Text = "Account management";
             this.accountManagementMenuItem.Click += new System.EventHandler(this.accountManagementMenuItem_Click);
             // 
             // gameLicensesMenuItem
             // 
             this.gameLicensesMenuItem.Name = "gameLicensesMenuItem";
-            this.gameLicensesMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.gameLicensesMenuItem.Size = new System.Drawing.Size(120, 24);
             this.gameLicensesMenuItem.Text = "Game Licenses";
             this.gameLicensesMenuItem.Click += new System.EventHandler(this.gameLicensesMenuItem_Click);
             // 
             // myProfileMenuItem
             // 
             this.myProfileMenuItem.Name = "myProfileMenuItem";
-            this.myProfileMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.myProfileMenuItem.Size = new System.Drawing.Size(90, 24);
             this.myProfileMenuItem.Text = "My Profile";
             this.myProfileMenuItem.Click += new System.EventHandler(this.myProfileMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // frmMyProfile1
             // 
-            this.frmMyProfile1.Location = new System.Drawing.Point(12, 27);
-            this.frmMyProfile1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.frmMyProfile1.Location = new System.Drawing.Point(14, 36);
+            this.frmMyProfile1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.frmMyProfile1.Name = "frmMyProfile1";
-            this.frmMyProfile1.Size = new System.Drawing.Size(776, 411);
+            this.frmMyProfile1.Size = new System.Drawing.Size(887, 548);
             this.frmMyProfile1.TabIndex = 1;
             this.frmMyProfile1.Visible = false;
             // 
             // frmAccount1
             // 
-            this.frmAccount1.Location = new System.Drawing.Point(12, 27);
-            this.frmAccount1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.frmAccount1.Location = new System.Drawing.Point(14, 36);
+            this.frmAccount1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.frmAccount1.Name = "frmAccount1";
-            this.frmAccount1.Size = new System.Drawing.Size(776, 411);
+            this.frmAccount1.Size = new System.Drawing.Size(887, 548);
             this.frmAccount1.TabIndex = 2;
             this.frmAccount1.Visible = false;
             this.frmAccount1.Load += new System.EventHandler(this.frmAccount1_Load);
             // 
             // frmGame1
             // 
-            this.frmGame1.Location = new System.Drawing.Point(0, 26);
+            this.frmGame1.Location = new System.Drawing.Point(0, 35);
+            this.frmGame1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.frmGame1.Name = "frmGame1";
-            this.frmGame1.Size = new System.Drawing.Size(970, 514);
+            this.frmGame1.Size = new System.Drawing.Size(1109, 685);
             this.frmGame1.TabIndex = 3;
             // 
             // frmGameLicense1
             // 
-            this.frmGameLicense1.Location = new System.Drawing.Point(0, 26);
+            this.frmGameLicense1.currentUser = null;
+            this.frmGameLicense1.Location = new System.Drawing.Point(0, 35);
+            this.frmGameLicense1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.frmGameLicense1.Name = "frmGameLicense1";
-            this.frmGameLicense1.Size = new System.Drawing.Size(970, 514);
+            this.frmGameLicense1.Size = new System.Drawing.Size(1109, 685);
             this.frmGameLicense1.TabIndex = 4;
+            // 
+            // frmCategory1
+            // 
+            this.frmCategory1.Location = new System.Drawing.Point(0, 36);
+            this.frmCategory1.Name = "frmCategory1";
+            this.frmCategory1.Size = new System.Drawing.Size(1019, 666);
+            this.frmCategory1.TabIndex = 5;
+            // 
+            // categoryToolStripMenuItem
+            // 
+            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.categoryToolStripMenuItem.Text = "Category";
+            this.categoryToolStripMenuItem.Click += new System.EventHandler(this.categoryToolStripMenuItem_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.frmCategory1);
             this.Controls.Add(this.frmGameLicense1);
             this.Controls.Add(this.frmGame1);
             this.Controls.Add(this.frmAccount1);
             this.Controls.Add(this.frmMyProfile1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -158,5 +181,7 @@
         private frmAccount frmAccount1;
         private frmGame frmGame1;
         private frmGameLicense frmGameLicense1;
+        private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
+        private frmCategory frmCategory1;
     }
 }

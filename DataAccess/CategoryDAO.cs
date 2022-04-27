@@ -84,23 +84,15 @@ public class CategoryDAO
         }
     }
 
-    public bool DeleteCategory(string id)
+    public bool DeleteCategory(Category category)
     {
         using (context = new GameStoreDBContext())
         {
             try
             {
-                Category deletedCategory = context.Categories.SingleOrDefault<Category>((c) => c.Id == id);
-                if (deletedCategory != null)
-                {
-                    context.Categories.Remove(deletedCategory);
-                    context.SaveChanges();
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                context.Categories.Remove(category);
+                context.SaveChanges();
+                return true;
             }
             catch (DbUpdateConcurrencyException ex)
             {

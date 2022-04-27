@@ -43,12 +43,13 @@
             this.gameLabel = new System.Windows.Forms.Label();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.activeBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gameLicenseContainer)).BeginInit();
             this.SuspendLayout();
             // 
             // deactivateGameBtn
             // 
-            this.deactivateGameBtn.Location = new System.Drawing.Point(722, 418);
+            this.deactivateGameBtn.Location = new System.Drawing.Point(721, 519);
             this.deactivateGameBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deactivateGameBtn.Name = "deactivateGameBtn";
             this.deactivateGameBtn.Size = new System.Drawing.Size(150, 31);
@@ -62,7 +63,7 @@
             this.gameLicenseContainer.AllowUserToAddRows = false;
             this.gameLicenseContainer.AllowUserToDeleteRows = false;
             this.gameLicenseContainer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gameLicenseContainer.Location = new System.Drawing.Point(23, 186);
+            this.gameLicenseContainer.Location = new System.Drawing.Point(22, 287);
             this.gameLicenseContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gameLicenseContainer.MultiSelect = false;
             this.gameLicenseContainer.Name = "gameLicenseContainer";
@@ -74,7 +75,7 @@
             // 
             // endDatePicker
             // 
-            this.endDatePicker.Location = new System.Drawing.Point(420, 120);
+            this.endDatePicker.Location = new System.Drawing.Point(419, 221);
             this.endDatePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(257, 27);
@@ -82,7 +83,7 @@
             // 
             // startDatePicker
             // 
-            this.startDatePicker.Location = new System.Drawing.Point(420, 47);
+            this.startDatePicker.Location = new System.Drawing.Point(419, 148);
             this.startDatePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(257, 27);
@@ -91,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(420, 96);
+            this.label3.Location = new System.Drawing.Point(419, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 77;
@@ -100,7 +101,7 @@
             // txtUserID
             // 
             this.txtUserID.FormattingEnabled = true;
-            this.txtUserID.Location = new System.Drawing.Point(134, 119);
+            this.txtUserID.Location = new System.Drawing.Point(133, 220);
             this.txtUserID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(249, 28);
@@ -109,7 +110,7 @@
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(23, 63);
+            this.IDLabel.Location = new System.Drawing.Point(22, 164);
             this.IDLabel.Name = "IDLabel";
             this.IDLabel.Size = new System.Drawing.Size(24, 20);
             this.IDLabel.TabIndex = 75;
@@ -117,7 +118,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(23, 87);
+            this.txtID.Location = new System.Drawing.Point(22, 188);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(60, 27);
@@ -126,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(420, 23);
+            this.label2.Location = new System.Drawing.Point(419, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 73;
@@ -135,7 +136,7 @@
             // memberLabel
             // 
             this.memberLabel.AutoSize = true;
-            this.memberLabel.Location = new System.Drawing.Point(134, 95);
+            this.memberLabel.Location = new System.Drawing.Point(133, 196);
             this.memberLabel.Name = "memberLabel";
             this.memberLabel.Size = new System.Drawing.Size(65, 20);
             this.memberLabel.TabIndex = 72;
@@ -143,7 +144,7 @@
             // 
             // searchBtn_GameLicense
             // 
-            this.searchBtn_GameLicense.Location = new System.Drawing.Point(722, 85);
+            this.searchBtn_GameLicense.Location = new System.Drawing.Point(721, 186);
             this.searchBtn_GameLicense.Name = "searchBtn_GameLicense";
             this.searchBtn_GameLicense.Size = new System.Drawing.Size(94, 29);
             this.searchBtn_GameLicense.TabIndex = 86;
@@ -154,7 +155,7 @@
             // txtGameID
             // 
             this.txtGameID.FormattingEnabled = true;
-            this.txtGameID.Location = new System.Drawing.Point(134, 47);
+            this.txtGameID.Location = new System.Drawing.Point(133, 148);
             this.txtGameID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGameID.Name = "txtGameID";
             this.txtGameID.Size = new System.Drawing.Size(249, 28);
@@ -163,7 +164,7 @@
             // gameLabel
             // 
             this.gameLabel.AutoSize = true;
-            this.gameLabel.Location = new System.Drawing.Point(134, 23);
+            this.gameLabel.Location = new System.Drawing.Point(133, 124);
             this.gameLabel.Name = "gameLabel";
             this.gameLabel.Size = new System.Drawing.Size(48, 20);
             this.gameLabel.TabIndex = 87;
@@ -171,7 +172,7 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(722, 289);
+            this.refreshBtn.Location = new System.Drawing.Point(721, 390);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(150, 32);
             this.refreshBtn.TabIndex = 89;
@@ -181,7 +182,7 @@
             // 
             // activeBtn
             // 
-            this.activeBtn.Location = new System.Drawing.Point(722, 354);
+            this.activeBtn.Location = new System.Drawing.Point(721, 455);
             this.activeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.activeBtn.Name = "activeBtn";
             this.activeBtn.Size = new System.Drawing.Size(150, 31);
@@ -190,10 +191,21 @@
             this.activeBtn.UseVisualStyleBackColor = true;
             this.activeBtn.Click += new System.EventHandler(this.activeBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(162, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(595, 60);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "Game License Management";
+            // 
             // frmGameLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.activeBtn);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.txtGameID);
@@ -211,8 +223,7 @@
             this.Controls.Add(this.memberLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGameLicense";
-            this.Size = new System.Drawing.Size(889, 568);
-            this.Load += new System.EventHandler(this.frmGameLicense_Load);
+            this.Size = new System.Drawing.Size(889, 659);
             ((System.ComponentModel.ISupportInitialize)(this.gameLicenseContainer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,5 +247,6 @@
         private System.Windows.Forms.ComboBox txtGameID;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.Button activeBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

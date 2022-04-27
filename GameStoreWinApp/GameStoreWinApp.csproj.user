@@ -26,5 +26,8 @@
     <Compile Update="frmMyProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="PreviewGameLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

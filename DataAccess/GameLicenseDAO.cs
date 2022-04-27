@@ -40,6 +40,7 @@ public class GameLicenseDAO
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                
                 return false;
             }
             catch (DbUpdateException ex)

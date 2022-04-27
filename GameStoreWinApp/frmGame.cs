@@ -12,12 +12,45 @@ namespace GameStoreWinApp
         private GameRepository gameRepository;
         private CategoryRepository categoryReposity;
         private frmGameForAdmin formGameForAdmin;
+        private IGameLicenseRepository gameLicenseRepository;
+        private User user;
 
         public frmGame()
         {
             InitializeComponent();
             gameRepository = new GameRepository();
             categoryReposity = new CategoryRepository();
+            gameLicenseRepository = new GameLicenseRepository();
+        }
+
+        public void SetUser(User user)
+        {
+            this.user = user;
+            if (user.RoleId == 1)
+            {
+                lbId.Visible = false;
+                txtID.Visible = false;
+
+                createGame.Visible = false;
+                updateGame.Visible = false;
+                deleteGame.Visible = false;
+
+                btnBuy.Visible = true;
+                btnSendPresent.Visible = true;
+            }
+            else
+            {
+                lbId.Visible = true;
+                txtID.Visible = true;
+
+                createGame.Visible = true;
+                updateGame.Visible = true;
+                deleteGame.Visible = true;
+
+                btnBuy.Visible = false;
+                btnSendPresent.Visible = false;
+            }
+            load();
         }
 
         private delegate List<Game> TableFilter(List<Game> GameList);
@@ -215,6 +248,72 @@ namespace GameStoreWinApp
                     e.Cancel = false;
                     errorProvider1.SetError(txtHigherPrice, null);
                 }
+            }
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string updateId = (string)gameContainer.Rows[gameContainer.CurrentCell.RowIndex].Cells[0].Value;
+
+                if (gameLicenseRepository.GetGameLicenseByUserIDAndGameID(user.Id, updateId) != null)
+                {
+                    MessageBox.Show("You already have this game!");
+                    return;
+                }
+
+                if (updateId != null)
+                {
+                    Game buyGame = gameRepository.GetGameById(updateId);
+                    PreviewGameLicense previewGameLicense = new PreviewGameLicense(buyGame, user);
+
+                    if (previewGameLicense.ShowDialog() == DialogResult.OK)
+                    {
+                        GameLicense GameLicenseObject = previewGameLicense.GetGameLicenseObject();
+
+                        bool createRes = gameLicenseRepository.CreateGameLicense(GameLicenseObject);
+                        if (createRes) MessageBox.Show("Create successfully");
+                        else MessageBox.Show("Failed to create");
+                    }
+                }
+            }
+            finally
+            {
+                loadTableData(delegate (List<Game> list)
+                {
+                    return list;
+                });
+            }
+        }
+
+        private void btnSendPresent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string updateId = (string)gameContainer.Rows[gameContainer.CurrentCell.RowIndex].Cells[0].Value;
+
+                if (updateId != null)
+                {
+                    Game buyGame = gameRepository.GetGameById(updateId);
+                    PreviewGameLicense previewGameLicense = new PreviewGameLicense(buyGame, null);
+
+                    if (previewGameLicense.ShowDialog() == DialogResult.OK)
+                    {
+                        GameLicense GameLicenseObject = previewGameLicense.GetGameLicenseObject();
+
+                        bool createRes = gameLicenseRepository.CreateGameLicense(GameLicenseObject);
+                        if (createRes) MessageBox.Show("Create successfully");
+                        else MessageBox.Show("Failed to create");
+                    }
+                }
+            }
+            finally
+            {
+                loadTableData(delegate (List<Game> list)
+                {
+                    return list;
+                });
             }
         }
     }

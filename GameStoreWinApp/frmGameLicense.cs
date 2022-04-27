@@ -27,6 +27,16 @@ namespace GameStoreWinApp
         public void setUser(User user)
         {
             currentUser = user;
+
+            if(user.RoleId == 1)
+            {
+                activeBtn.Visible = false;
+                deactivateGameBtn.Visible = false;
+            } else if(user.RoleId == 2)
+            {
+                activeBtn.Visible = true;
+                deactivateGameBtn.Visible = true;
+            }
         }
         private void loadTableData(TableFilter filter)
         {

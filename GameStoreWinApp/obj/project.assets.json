@@ -5738,19 +5738,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
+    "C:\\Users\\kiman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
+      "projectUniqueName": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj",
       "projectName": "GameStoreWinApp",
-      "projectPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
-      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\obj\\",
+      "projectPath": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj",
+      "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5764,8 +5764,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj"
+            "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -5797,7 +5797,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

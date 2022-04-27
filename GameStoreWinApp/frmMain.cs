@@ -23,16 +23,19 @@ namespace GameStoreWinApp
             {
                 myProfileMenuItem.Visible = false;
                 accountManagementMenuItem.Visible = true;
+                categoryToolStripMenuItem.Visible = true;
 
             }
             else if (user.RoleId == 1) //is Customer
             {
                 myProfileMenuItem.Visible = true;
                 accountManagementMenuItem.Visible = false;
+                categoryToolStripMenuItem.Visible = false;
             }
             frmGame1.Show();
             frmGame1.SetUser(user);
             frmGameLicense1.Hide();
+            frmCategory1.Hide();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

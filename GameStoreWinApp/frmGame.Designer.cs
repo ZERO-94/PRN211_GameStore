@@ -55,45 +55,44 @@
             // lbUnitInStock
             // 
             this.lbUnitInStock.AutoSize = true;
-            this.lbUnitInStock.Location = new System.Drawing.Point(443, 217);
+            this.lbUnitInStock.Location = new System.Drawing.Point(388, 116);
             this.lbUnitInStock.Name = "lbUnitInStock";
-            this.lbUnitInStock.Size = new System.Drawing.Size(71, 20);
+            this.lbUnitInStock.Size = new System.Drawing.Size(56, 15);
             this.lbUnitInStock.TabIndex = 33;
             this.lbUnitInStock.Text = "To (Price)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(162, 217);
+            this.label3.Location = new System.Drawing.Point(142, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 32;
             this.label3.Text = "Category";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(443, 156);
+            this.label2.Location = new System.Drawing.Point(388, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 31;
             this.label2.Text = "From (Price)";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 156);
+            this.label1.Location = new System.Drawing.Point(142, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Name";
             // 
             // searchBtn_Game
             // 
-            this.searchBtn_Game.Location = new System.Drawing.Point(717, 207);
-            this.searchBtn_Game.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchBtn_Game.Location = new System.Drawing.Point(627, 108);
             this.searchBtn_Game.Name = "searchBtn_Game";
-            this.searchBtn_Game.Size = new System.Drawing.Size(133, 31);
+            this.searchBtn_Game.Size = new System.Drawing.Size(116, 23);
             this.searchBtn_Game.TabIndex = 29;
             this.searchBtn_Game.Text = "Search";
             this.searchBtn_Game.UseVisualStyleBackColor = true;
@@ -101,36 +100,32 @@
             // 
             // txtLowerPrice
             // 
-            this.txtLowerPrice.Location = new System.Drawing.Point(443, 180);
-            this.txtLowerPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLowerPrice.Location = new System.Drawing.Point(388, 88);
             this.txtLowerPrice.Name = "txtLowerPrice";
-            this.txtLowerPrice.Size = new System.Drawing.Size(236, 27);
+            this.txtLowerPrice.Size = new System.Drawing.Size(207, 23);
             this.txtLowerPrice.TabIndex = 28;
             this.txtLowerPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtLowerPrice_Validating);
             // 
             // txtHigherPrice
             // 
-            this.txtHigherPrice.Location = new System.Drawing.Point(443, 241);
-            this.txtHigherPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHigherPrice.Location = new System.Drawing.Point(388, 134);
             this.txtHigherPrice.Name = "txtHigherPrice";
-            this.txtHigherPrice.Size = new System.Drawing.Size(236, 27);
+            this.txtHigherPrice.Size = new System.Drawing.Size(207, 23);
             this.txtHigherPrice.TabIndex = 27;
             this.txtHigherPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtHigherPrice_Validating);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(162, 180);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Location = new System.Drawing.Point(142, 135);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(236, 27);
+            this.txtName.Size = new System.Drawing.Size(207, 23);
             this.txtName.TabIndex = 26;
             // 
             // createGame
             // 
-            this.createGame.Location = new System.Drawing.Point(717, 440);
-            this.createGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.createGame.Location = new System.Drawing.Point(627, 283);
             this.createGame.Name = "createGame";
-            this.createGame.Size = new System.Drawing.Size(133, 31);
+            this.createGame.Size = new System.Drawing.Size(116, 23);
             this.createGame.TabIndex = 24;
             this.createGame.Text = "Create";
             this.createGame.UseVisualStyleBackColor = true;
@@ -138,10 +133,9 @@
             // 
             // deleteGame
             // 
-            this.deleteGame.Location = new System.Drawing.Point(717, 596);
-            this.deleteGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteGame.Location = new System.Drawing.Point(627, 400);
             this.deleteGame.Name = "deleteGame";
-            this.deleteGame.Size = new System.Drawing.Size(133, 31);
+            this.deleteGame.Size = new System.Drawing.Size(116, 23);
             this.deleteGame.TabIndex = 23;
             this.deleteGame.Text = "Delete";
             this.deleteGame.UseVisualStyleBackColor = true;
@@ -149,10 +143,9 @@
             // 
             // updateGame
             // 
-            this.updateGame.Location = new System.Drawing.Point(717, 519);
-            this.updateGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateGame.Location = new System.Drawing.Point(627, 342);
             this.updateGame.Name = "updateGame";
-            this.updateGame.Size = new System.Drawing.Size(133, 31);
+            this.updateGame.Size = new System.Drawing.Size(116, 23);
             this.updateGame.TabIndex = 22;
             this.updateGame.Text = "Update";
             this.updateGame.UseVisualStyleBackColor = true;
@@ -163,30 +156,30 @@
             this.gameContainer.AllowUserToAddRows = false;
             this.gameContainer.AllowUserToDeleteRows = false;
             this.gameContainer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gameContainer.Location = new System.Drawing.Point(33, 292);
-            this.gameContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gameContainer.Location = new System.Drawing.Point(29, 172);
             this.gameContainer.MultiSelect = false;
             this.gameContainer.Name = "gameContainer";
             this.gameContainer.ReadOnly = true;
             this.gameContainer.RowHeadersWidth = 51;
             this.gameContainer.RowTemplate.Height = 25;
-            this.gameContainer.Size = new System.Drawing.Size(669, 333);
+            this.gameContainer.Size = new System.Drawing.Size(585, 250);
             this.gameContainer.TabIndex = 21;
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(33, 180);
+            this.lbId.Location = new System.Drawing.Point(29, 88);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(24, 20);
+            this.lbId.Size = new System.Drawing.Size(18, 15);
             this.lbId.TabIndex = 34;
             this.lbId.Text = "ID";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(33, 207);
+            this.txtID.Location = new System.Drawing.Point(29, 108);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(86, 27);
+            this.txtID.Size = new System.Drawing.Size(76, 23);
             this.txtID.TabIndex = 35;
             // 
             // errorProvider1
@@ -195,10 +188,9 @@
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(717, 292);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuy.Location = new System.Drawing.Point(627, 172);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(133, 31);
+            this.btnBuy.Size = new System.Drawing.Size(116, 23);
             this.btnBuy.TabIndex = 36;
             this.btnBuy.Text = "Buy";
             this.btnBuy.UseVisualStyleBackColor = true;
@@ -206,10 +198,9 @@
             // 
             // btnSendPresent
             // 
-            this.btnSendPresent.Location = new System.Drawing.Point(717, 365);
-            this.btnSendPresent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSendPresent.Location = new System.Drawing.Point(627, 227);
             this.btnSendPresent.Name = "btnSendPresent";
-            this.btnSendPresent.Size = new System.Drawing.Size(133, 31);
+            this.btnSendPresent.Size = new System.Drawing.Size(116, 23);
             this.btnSendPresent.TabIndex = 37;
             this.btnSendPresent.Text = "Send Present";
             this.btnSendPresent.UseVisualStyleBackColor = true;
@@ -218,24 +209,25 @@
             // txtCategory
             // 
             this.txtCategory.FormattingEnabled = true;
-            this.txtCategory.Location = new System.Drawing.Point(162, 241);
+            this.txtCategory.Location = new System.Drawing.Point(142, 134);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(236, 28);
+            this.txtCategory.Size = new System.Drawing.Size(207, 23);
             this.txtCategory.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(295, 46);
+            this.label4.Location = new System.Drawing.Point(250, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(432, 60);
+            this.label4.Size = new System.Drawing.Size(345, 47);
             this.label4.TabIndex = 39;
             this.label4.Text = "Game Management";
             // 
             // frmGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCategory);
@@ -255,9 +247,8 @@
             this.Controls.Add(this.deleteGame);
             this.Controls.Add(this.updateGame);
             this.Controls.Add(this.gameContainer);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGame";
-            this.Size = new System.Drawing.Size(1014, 731);
+            this.Size = new System.Drawing.Size(887, 548);
             ((System.ComponentModel.ISupportInitialize)(this.gameContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

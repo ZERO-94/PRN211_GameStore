@@ -40,7 +40,7 @@ public class GameDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Games.SingleOrDefault(x => x.Id == id);
+            return context.Games.AsNoTracking().Include(g => g.Category).SingleOrDefault(x => x.Id == id);
         }
     }
 
@@ -132,18 +132,57 @@ public class GameDAO
         }
     }
 
+    public List<string> GetGameIdList()
+    {
+        using (context = new GameStoreDBContext())
+        {
+            var gameList = GetAllGames();
+            List<string> gameIdList = new List<string>();
+            foreach (Game game in gameList)
+            {
+                gameIdList.Add(game.Id);
+            }
+            return gameIdList;
+        }
+    }
+
     public List<Game> GetFilteredGameByName(string searchKey, List<Game> games)
     {
-        return games.FindAll(g => g.Name.ToUpper().Contains(searchKey.ToUpper()));
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.Name.ToUpper().Contains(searchKey.ToUpper()));
+        }
+
     }
 
     public List<Game> GetFilteredGameByCategory(string categoryId, List<Game> games)
     {
-        return games.FindAll(g => g.CategoryId == categoryId);
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.CategoryId == categoryId);
+        }
+
     }
 
     public List<Game> GetFilteredGameByPriceRange(int lowerPrice, int upperPrice, List<Game> games)
     {
-        return games.FindAll(g => g.Price >= lowerPrice && g.Price <= upperPrice);
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.Price >= lowerPrice && g.Price <= upperPrice);
+        }
+
+    }
+
+    public List<Game> SearchGame(string? searchId, string? searchName, string? category, decimal? searchLowerPrice, decimal? searchHigherPrice)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            return context.Games.Where(game => searchId == null || game.Id == searchId)
+            .Where(game => searchName == null || game.Name.Contains(searchName))
+            .Where(game => category == null || game.Category.Name == category)
+            .Where(game => searchLowerPrice == null || game.Price >= searchLowerPrice)
+            .Where(game => searchHigherPrice == null || game.Price <= searchHigherPrice)
+            .ToList();
+        }
     }
 }

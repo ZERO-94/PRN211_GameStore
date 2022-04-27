@@ -24,5 +24,7 @@ namespace DataAccess.repository
         public User CheckLogin(string email, string password);
 
         public bool ActiveAccount(string id);
+
+        public List<string> GetUserIdList();
     }
 }

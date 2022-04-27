@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj": {}
+    "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj": {}
   },
   "projects": {
-    "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj": {
+    "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\obj\\",
+        "projectPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj": {
+    "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\obj\\",
+        "projectPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\C#\\PRN211_GameStore\\BusinessObject\\BusinessObject.csproj"
+              "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "E:\\C#\\PRN211_GameStore-main\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -134,21 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj": {
+    "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj",
+        "projectUniqueName": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
         "projectName": "GameStoreWinApp",
-        "projectPath": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\GameStoreWinApp.csproj",
-        "packagesPath": "C:\\Users\\kiman\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\PRN211_GameStore\\GameStoreWinApp\\obj\\",
+        "projectPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\GameStoreWinApp.csproj",
+        "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\PRN211_GameStore-main\\GameStoreWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,8 +162,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\C#\\PRN211_GameStore\\DataAccess\\DataAccess.csproj"
+              "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "E:\\C#\\PRN211_GameStore-main\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -195,7 +195,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

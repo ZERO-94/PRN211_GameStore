@@ -3,11 +3,6 @@ using DataAccess.repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameStoreWinApp
@@ -182,10 +177,11 @@ namespace GameStoreWinApp
             else if (operationType.Equals("update"))
             {
 
-                if(user.Status)
+                if (user.Status)
                 {
                     btnActiveAndDeactive.Text = "Deactive";
-                } else
+                }
+                else
                 {
                     btnActiveAndDeactive.Text = "Active";
                 }

@@ -29,5 +29,9 @@ namespace DataAccess.repository
         public List<Game> GetFilteredGameByCategory(string categoryId, List<Game> games) => gameDAO.GetFilteredGameByCategory(categoryId, games);
 
         public List<Game> GetFilteredGameByPriceRange(int lowerPrice, int upperPrice, List<Game> games) => gameDAO.GetFilteredGameByPriceRange(lowerPrice, upperPrice, games);
+
+        public List<Game> SearchGame(string? searchId, string? searchName, string? category, decimal? searchLowerPrice, decimal? searchHigherPrice) => gameDAO.SearchGame(searchId, searchName, category, searchLowerPrice, searchHigherPrice);
+
+        public List<string> GetGameIdList() => gameDAO.GetGameIdList();
     }
 }

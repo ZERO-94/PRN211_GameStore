@@ -40,7 +40,7 @@ public class GameDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.Games.SingleOrDefault(x => x.Id == id);
+            return context.Games.Include(g => g.Category).SingleOrDefault(x => x.Id == id);
         }
     }
 

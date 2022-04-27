@@ -30,6 +30,8 @@ namespace GameStoreWinApp
                 myProfileMenuItem.Visible = true;
                 accountManagementMenuItem.Visible = false;
             }
+            frmGame1.Show();
+            frmGame1.SetUser(user);
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace GameStoreWinApp
         {
             frmAccount1.Hide();
             frmGame1.Show();
+            frmGame1.SetUser(user);
         }
 
         private void frmGame1_Load(object sender, EventArgs e)

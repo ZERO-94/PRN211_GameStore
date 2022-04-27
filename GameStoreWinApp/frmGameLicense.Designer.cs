@@ -42,19 +42,20 @@
             this.txtGameID = new System.Windows.Forms.ComboBox();
             this.gameLabel = new System.Windows.Forms.Label();
             this.refreshBtn = new System.Windows.Forms.Button();
-            this.updateGameLicense = new System.Windows.Forms.Button();
+            this.activeBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gameLicenseContainer)).BeginInit();
             this.SuspendLayout();
             // 
             // deactivateGameBtn
             // 
-            this.deactivateGameBtn.Location = new System.Drawing.Point(722, 384);
+            this.deactivateGameBtn.Location = new System.Drawing.Point(722, 418);
             this.deactivateGameBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deactivateGameBtn.Name = "deactivateGameBtn";
             this.deactivateGameBtn.Size = new System.Drawing.Size(150, 31);
             this.deactivateGameBtn.TabIndex = 84;
             this.deactivateGameBtn.Text = "Deactivate";
             this.deactivateGameBtn.UseVisualStyleBackColor = true;
+            this.deactivateGameBtn.Click += new System.EventHandler(this.deactivateGameBtn_Click);
             // 
             // gameLicenseContainer
             // 
@@ -170,7 +171,7 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(722, 265);
+            this.refreshBtn.Location = new System.Drawing.Point(722, 289);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(150, 32);
             this.refreshBtn.TabIndex = 89;
@@ -178,26 +179,26 @@
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
-            // updateGameLicense
+            // activeBtn
             // 
-            this.updateGameLicense.Location = new System.Drawing.Point(722, 326);
-            this.updateGameLicense.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.updateGameLicense.Name = "updateGameLicense";
-            this.updateGameLicense.Size = new System.Drawing.Size(150, 31);
-            this.updateGameLicense.TabIndex = 85;
-            this.updateGameLicense.Text = "Update";
-            this.updateGameLicense.UseVisualStyleBackColor = true;
-            this.updateGameLicense.Click += new System.EventHandler(this.updateGameLicense_Click);
+            this.activeBtn.Location = new System.Drawing.Point(722, 354);
+            this.activeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.activeBtn.Name = "activeBtn";
+            this.activeBtn.Size = new System.Drawing.Size(150, 31);
+            this.activeBtn.TabIndex = 90;
+            this.activeBtn.Text = "Activate";
+            this.activeBtn.UseVisualStyleBackColor = true;
+            this.activeBtn.Click += new System.EventHandler(this.activeBtn_Click);
             // 
             // frmGameLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.activeBtn);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.txtGameID);
             this.Controls.Add(this.gameLabel);
             this.Controls.Add(this.searchBtn_GameLicense);
-            this.Controls.Add(this.updateGameLicense);
             this.Controls.Add(this.deactivateGameBtn);
             this.Controls.Add(this.gameLicenseContainer);
             this.Controls.Add(this.endDatePicker);
@@ -234,6 +235,6 @@
         private System.Windows.Forms.Label gameLabel;
         private System.Windows.Forms.ComboBox txtGameID;
         private System.Windows.Forms.Button refreshBtn;
-        private System.Windows.Forms.Button updateGameLicense;
+        private System.Windows.Forms.Button activeBtn;
     }
 }

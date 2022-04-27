@@ -17,6 +17,8 @@ namespace DataAccess.repository
         public List<GameLicense> SearchGameLicense(string? id, string? gameId, string? userId, DateTime? lowerDate, DateTime? higherDate);
         public bool DeactivateGameLicense(string orderId);
 
+        public bool ActivateGameLicense(string orderId);
+
         public GameLicense GetGameLicenseByID(string id);
     }
 }

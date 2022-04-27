@@ -90,13 +90,11 @@ namespace GameStoreWinApp
 
             if (operationType.Equals("create"))
             {
-                //show all
-                lbOperation.Text = "CREATE GAME";
+
             }
             else if (operationType.Equals("update"))
             {
                 //hide id and password
-                lbOperation.Text = "UPDATE GAME: ID  " + game.Id;
                 txtId.ReadOnly = true;
 
                 //load data

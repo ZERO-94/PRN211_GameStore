@@ -12,7 +12,6 @@ namespace GameStoreWinApp
         private GameLicenseRepository gameLicenseRepository;
         private GameRepository gameRepository;
         private UserRepository userRepository;
-        private frmGameForAdmin formGameForAdmin;
         public frmGameLicense()
         {
             InitializeComponent();
@@ -42,7 +41,7 @@ namespace GameStoreWinApp
 
             foreach (GameLicense gameLicense in gamesLicenseAfterFilter)
             {
-                gameLicenseTable.Rows.Add(gameLicense.Id, gameLicense.UserId, gameLicense.GameId, gameLicense.BuyTime, gameLicense.Status);
+                gameLicenseTable.Rows.Add(gameLicense.Id, gameLicense.UserId, gameLicense.User.Username, gameLicense.GameId, gameLicense.Game.Name, gameLicense.BuyTime, gameLicense.Status);
             }
 
             gameLicenseContainer.DataSource = gameLicenseTable;
@@ -76,11 +75,6 @@ namespace GameStoreWinApp
             });
         }
 
-
-        private void frmGame_Load(object sender, EventArgs e)
-        {
-        }
-
         private void frmGameLicense_Load(object sender, EventArgs e)
         {
             load();
@@ -93,41 +87,52 @@ namespace GameStoreWinApp
             txtUserID.Text = "";
             txtID.Text = "";
         }
-
-        private void updateGameLicense_Click(object sender, EventArgs e)
+        private void deactivateGameBtn_Click(object sender, EventArgs e)
         {
+            string updateId = (string)gameLicenseContainer.Rows[gameLicenseContainer.CurrentCell.RowIndex].Cells[0].Value;
 
+            if (updateId != null)
+            {
+                if (gameLicenseRepository.DeactivateGameLicense(updateId))
+                {
+                    MessageBox.Show("Deactiveate succesfully");
+                    load();
+                }
+                else
+                {
+                    MessageBox.Show("Update failed!");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("This Id isn't exist");
+            }
         }
 
-        //private void updateProduct_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        string updateId = (string)gameLicenseContainer.Rows[gameLicenseContainer.CurrentCell.RowIndex].Cells[0].Value;
+        private void activeBtn_Click(object sender, EventArgs e)
+        {
+            string updateId = (string)gameLicenseContainer.Rows[gameLicenseContainer.CurrentCell.RowIndex].Cells[0].Value;
 
-        //        if (updateId != null)
-        //        {
-        //            GameLicense updateGameLicense = gameLicenseRepository.GetGameLicenseByID(updateId);
-        //            frmGameForAdmin frmGameForAdmin = new frmGameForAdmin("update", updateGameLicense);
+            if (updateId != null)
+            {
+                if (gameLicenseRepository.ActivateGameLicense(updateId))
+                {
+                    MessageBox.Show("Activate succesfully");
+                    load();
+                }
+                else
+                {
+                    MessageBox.Show("Update failed!");
+                }
 
-        //            if (frmGameForAdmin.ShowDialog() == DialogResult.OK)
-        //            {
-        //                //create Game
-        //                Game GameObject = frmGameForAdmin.GetGameObject();
-
-        //                bool updateRes = gameRepository.UpdateGame(GameObject);
-        //                if (updateRes) MessageBox.Show("Update successfully");
-        //                else MessageBox.Show("Failed to update");
-        //            }
-        //        }
-        //    }
-        //    finally
-        //    {
-        //        loadTableData(delegate (List<Game> list)
-        //        {
-        //            return list;
-        //        });
-        //    }
-        //}
+            }
+            else
+            {
+                MessageBox.Show("This Id isn't exist");
+            }
+        }
     }
+
 }
+

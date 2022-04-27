@@ -25,6 +25,8 @@ namespace DataAccess.repository
         public List<GameLicense> SearchGameLicense(string? id, string? gameId, string? userId, DateTime? lowerDate, DateTime? higherDate) => gameLicenseDAO.SearchGameLicense(id, gameId, userId, lowerDate, higherDate);
 
         public GameLicense GetGameLicenseByID(string id) => gameLicenseDAO.GetGameLicenseByID(id);
+
+        public bool ActivateGameLicense(string orderId) => gameLicenseDAO.ActivateGameLicense(orderId);
     }
 }
 

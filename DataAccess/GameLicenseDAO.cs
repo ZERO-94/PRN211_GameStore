@@ -53,13 +53,17 @@ public class GameLicenseDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.GameLicenses.ToList();
+            return context.GameLicenses.Include(g => g.User).Include(g => g.Game).ToList();
         }
     }
 
     public List<GameLicense> GetGameLicensesListByUserID(string userID, List<GameLicense> gameLicenses)
     {
-        return gameLicenses.FindAll(g => g.UserId == userID);
+        using (context = new GameStoreDBContext())
+        {
+            return gameLicenses.FindAll(g => g.UserId == userID);
+        }
+
     }
     public GameLicense GetGameLicenseByUserIDAndGameID(string userId, string gameId)
     {
@@ -73,7 +77,7 @@ public class GameLicenseDAO
     {
         using (context = new GameStoreDBContext())
         {
-            return context.GameLicenses.SingleOrDefault(g => g.Id == id);
+            return context.GameLicenses.Include(g => g.User).Include(g => g.Game).SingleOrDefault(g => g.Id == id);
         }
     }
 
@@ -95,6 +99,22 @@ public class GameLicenseDAO
         }
 
 
+    }
+
+    public bool ActivateGameLicense(string orderId)
+    {
+        using (context = new GameStoreDBContext())
+        {
+            GameLicense ActivateGameLicense = context.GameLicenses.SingleOrDefault<GameLicense>((g) => g.Id == orderId);
+            if (ActivateGameLicense != null)
+            {
+                ActivateGameLicense.Status = true;
+                context.GameLicenses.Update(ActivateGameLicense);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 
     public bool DeactivateGameLicense(string orderId)

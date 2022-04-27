@@ -79,6 +79,8 @@ namespace GameStoreWinApp
             }
 
             gameContainer.DataSource = gameTable;
+            txtCategory.DataSource = categoryReposity.getCategoryNameList();
+            txtCategory.Text = "";
         }
 
         private void searchBtn_Game_Click(object sender, EventArgs e)

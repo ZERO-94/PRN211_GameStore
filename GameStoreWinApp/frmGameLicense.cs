@@ -9,6 +9,8 @@ namespace GameStoreWinApp
 {
     public partial class frmGameLicense : UserControl
     {
+
+        public User currentUser { get; set; }
         private GameLicenseRepository gameLicenseRepository;
         private GameRepository gameRepository;
         private UserRepository userRepository;
@@ -33,8 +35,17 @@ namespace GameStoreWinApp
             gameLicenseTable.Columns.Add("Buy Time");
             gameLicenseTable.Columns.Add("Status");
 
+            List<GameLicense> gameLicenses = new List<GameLicense>();
+            if (currentUser.RoleId == 1)
+            {
+                gameLicenses = gameLicenseRepository.GetGameLicensesListByUserID(currentUser.Id, gameLicenseRepository.GetAllGameLicenses());
+            }
+            else
+            {
+                gameLicenses = gameLicenseRepository.GetAllGameLicenses();
+            }
             //load data
-            List<GameLicense> gameLicenses = gameLicenseRepository.GetAllGameLicenses();
+            gameLicenses = gameLicenseRepository.GetAllGameLicenses();
 
             //filter in here
             List<GameLicense> gamesLicenseAfterFilter = filter(gameLicenses);

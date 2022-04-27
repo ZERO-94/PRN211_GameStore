@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmGameForAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,8 +29,8 @@
     <Compile Update="frmMyProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="PreviewGameLicense.cs">
-      <SubType>Form</SubType>
+    <Compile Update="frmCategory.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

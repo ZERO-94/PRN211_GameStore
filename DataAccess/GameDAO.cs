@@ -148,17 +148,29 @@ public class GameDAO
 
     public List<Game> GetFilteredGameByName(string searchKey, List<Game> games)
     {
-        return games.FindAll(g => g.Name.ToUpper().Contains(searchKey.ToUpper()));
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.Name.ToUpper().Contains(searchKey.ToUpper()));
+        }
+
     }
 
     public List<Game> GetFilteredGameByCategory(string categoryId, List<Game> games)
     {
-        return games.FindAll(g => g.CategoryId == categoryId);
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.CategoryId == categoryId);
+        }
+
     }
 
     public List<Game> GetFilteredGameByPriceRange(int lowerPrice, int upperPrice, List<Game> games)
     {
-        return games.FindAll(g => g.Price >= lowerPrice && g.Price <= upperPrice);
+        using (context = new GameStoreDBContext())
+        {
+            return games.FindAll(g => g.Price >= lowerPrice && g.Price <= upperPrice);
+        }
+
     }
 
     public List<Game> SearchGame(string? searchId, string? searchName, string? category, decimal? searchLowerPrice, decimal? searchHigherPrice)

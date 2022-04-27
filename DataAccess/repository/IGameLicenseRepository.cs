@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using System;
 using System.Collections.Generic;
 
 namespace DataAccess.repository
@@ -7,9 +8,15 @@ namespace DataAccess.repository
     {
         public List<GameLicense> GetAllGameLicenses();
 
-        public List<GameLicense> GetGameLicensesListByOrderID(string orderID, List<GameLicense> gameLicenses);
+        public bool CreateGameLicense(GameLicense newGameLicense);
+
+        public List<GameLicense> GetGameLicensesListByUserID(string userID, List<GameLicense> gameLicenses);
 
         public GameLicense GetGameLicenseByUserIDAndGameID(string userId, string gameId);
+
+        public List<GameLicense> SearchGameLicense(string? id, string? gameId, string? userId, DateTime? lowerDate, DateTime? higherDate);
         public bool DeactivateGameLicense(string orderId);
+
+        public GameLicense GetGameLicenseByID(string id);
     }
 }

@@ -141,7 +141,7 @@ public class UserDAO
 
     public List<User> GetAllUsers()
     {
-         using (context = new GameStoreDBContext())
+        using (context = new GameStoreDBContext())
         {
             return context.Users.Include(u => u.Role).ToList();
         }
@@ -168,6 +168,20 @@ public class UserDAO
                 return true;
             }
             return false;
+        }
+    }
+
+    public List<string> GetUserIdList()
+    {
+        using (context = new GameStoreDBContext())
+        {
+            var userList = GetAllUsers();
+            List<string> userIdList = new List<string>();
+            foreach (User user in userList)
+            {
+                userIdList.Add(user.Id);
+            }
+            return userIdList;
         }
     }
 

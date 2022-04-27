@@ -37,6 +37,7 @@
             this.frmMyProfile1 = new GameStoreWinApp.frmMyProfile();
             this.frmAccount1 = new GameStoreWinApp.frmAccount();
             this.frmGame1 = new GameStoreWinApp.frmGame();
+            this.frmGameLicense1 = new GameStoreWinApp.frmGameLicense();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,11 +120,21 @@
             this.frmGame1.TabIndex = 3;
             this.frmGame1.Load += new System.EventHandler(this.frmGame1_Load);
             // 
+            // frmGameLicense1
+            // 
+            this.frmGameLicense1.Location = new System.Drawing.Point(0, 34);
+            this.frmGameLicense1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.frmGameLicense1.Name = "frmGameLicense1";
+            this.frmGameLicense1.Size = new System.Drawing.Size(1109, 685);
+            this.frmGameLicense1.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.frmGameLicense1);
             this.Controls.Add(this.frmGame1);
             this.Controls.Add(this.frmAccount1);
             this.Controls.Add(this.frmMyProfile1);
@@ -151,5 +162,6 @@
         private frmMyProfile frmMyProfile1;
         private frmAccount frmAccount1;
         private frmGame frmGame1;
+        private frmGameLicense frmGameLicense1;
     }
 }

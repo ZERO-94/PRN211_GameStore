@@ -30,6 +30,8 @@ namespace GameStoreWinApp
                 myProfileMenuItem.Visible = true;
                 accountManagementMenuItem.Visible = false;
             }
+            frmGameLicense1.Hide();
+
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace GameStoreWinApp
         {
             frmAccount1.Hide();
             frmGame1.Hide();
+            frmGameLicense1.Hide();
             frmMyProfile1.Show();
             frmMyProfile1.load(user);
         }
@@ -52,12 +55,16 @@ namespace GameStoreWinApp
             frmAccount1.Show();
             frmAccount1.load();
             frmGame1.Hide();
+            frmGameLicense1.Hide();
         }
 
 
         private void gameLicensesMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAccount1.Hide();
+            frmGame1.Hide();
+            frmGameLicense1.Show();
+            frmGame1.load();
         }
 
         private void frmAccount1_Load(object sender, EventArgs e)
@@ -68,7 +75,9 @@ namespace GameStoreWinApp
         private void gameMenuItem_Click(object sender, EventArgs e)
         {
             frmAccount1.Hide();
+            frmGameLicense1.Hide();
             frmGame1.Show();
+            frmGame1.load();
         }
 
         private void frmGame1_Load(object sender, EventArgs e)

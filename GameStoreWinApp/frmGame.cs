@@ -63,7 +63,7 @@ namespace GameStoreWinApp
 
                     return gameRepository.SearchGame(searchId, searchName, searchCategory, lowerPrice, higherPrice);
                 });
-            };
+            }
         }
 
         public void load()
@@ -72,12 +72,6 @@ namespace GameStoreWinApp
             {
                 return list; //get all
             });
-        }
-
-
-        private void frmGame_Load(object sender, EventArgs e)
-        {
-            load();
         }
 
         private void createGame_Click(object sender, EventArgs e)
@@ -166,6 +160,61 @@ namespace GameStoreWinApp
                 {
                     return list;
                 });
+            }
+        }
+
+        private void txtLowerPrice_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            decimal result;
+            if (String.IsNullOrEmpty(txtLowerPrice.Text) || String.IsNullOrWhiteSpace(txtLowerPrice.Text))
+            {
+
+            }
+            else
+            {
+                if (!decimal.TryParse(txtLowerPrice.Text.Trim(), out result))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtLowerPrice, "Price must be decimal!");
+                }
+                else if (decimal.Parse(txtLowerPrice.Text.Trim()) < 0)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtLowerPrice, "Price must not be negative number!");
+                }
+                else
+                {
+                    e.Cancel = false;
+                    errorProvider1.SetError(txtLowerPrice, null);
+                }
+            }
+
+        }
+
+        private void txtHigherPrice_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            decimal result;
+            if (String.IsNullOrEmpty(txtHigherPrice.Text) || String.IsNullOrWhiteSpace(txtHigherPrice.Text))
+            {
+
+            }
+            else
+            {
+                if (!decimal.TryParse(txtHigherPrice.Text.Trim(), out result))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtHigherPrice, "Price must be decimal!");
+                }
+                else if (decimal.Parse(txtHigherPrice.Text.Trim()) < 0)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtHigherPrice, "Price must not be negative number!");
+                }
+                else
+                {
+                    e.Cancel = false;
+                    errorProvider1.SetError(txtHigherPrice, null);
+                }
             }
         }
     }

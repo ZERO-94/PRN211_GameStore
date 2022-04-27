@@ -171,11 +171,6 @@ namespace GameStoreWinApp
             }
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtName_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Text.Trim()))

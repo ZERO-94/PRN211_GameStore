@@ -29,7 +29,8 @@ namespace GameStoreWinApp
 
         private void tbReceiverEmail_Validating(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(tbReceiverEmail.Text.Trim()))
+            User target = userRepository.findByEmail(tbReceiverEmail.Text.Trim());
+            if (string.IsNullOrWhiteSpace(tbReceiverEmail.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(tbReceiverEmail, "Receiver name must not be blank!");
@@ -37,7 +38,13 @@ namespace GameStoreWinApp
             {
                 e.Cancel= true;
                 errorProvider1.SetError(tbReceiverEmail, "Invalid Receiver Email!");
-            } else
+            }
+            else if (gameLicenseRepository.GetGameLicenseByUserIDAndGameID(target.Id, game.Id) != null)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(tbReceiverEmail, "This user already has this game!");
+            }
+            else
             {
                 e.Cancel = false;
                 errorProvider1.SetError(tbReceiverEmail, null);
@@ -49,7 +56,7 @@ namespace GameStoreWinApp
 
             lbGameName.Text = game.Name;
             lbGameCategory.Text = game.Category.Name;
-            lbActiveDate.Text = new DateTime().ToString();
+            lbActiveDate.Text = DateTime.Now.ToString();
 
             if(user == null) //gift
             {
@@ -59,6 +66,7 @@ namespace GameStoreWinApp
             {
                 lbReceiverHeader.Visible = false;
                 tbReceiverEmail.Visible = false;
+                lbBuyerEmail.Text = user.Email;
             }
         }
 
@@ -82,20 +90,23 @@ namespace GameStoreWinApp
 
                 var maxNumber = idNumber.Max();
 
+                MessageBox.Show(maxNumber.ToString());
+
                 GameLicense gameLicense = new GameLicense()
                 {
                     Id = "GL" + (maxNumber + 1).ToString(),
-                    Game = game,
-                    Status = true
+                    GameId = game.Id,
+                    Status = true,
+                    BuyTime = DateTime.Now,
                 };
 
                 if(user == null) //gift
                 {
                     User receiver = userRepository.findByEmail(tbReceiverEmail.Text.Trim());
-                    gameLicense.User = receiver;
+                    gameLicense.UserId = receiver.Id;
                 } else
                 {
-                    gameLicense.User = user;
+                    gameLicense.UserId = user.Id;
                 }
                 
                 return gameLicense;

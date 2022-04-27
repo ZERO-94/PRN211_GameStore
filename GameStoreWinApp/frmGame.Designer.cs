@@ -231,7 +231,6 @@
             this.Controls.Add(this.gameContainer);
             this.Name = "frmGame";
             this.Size = new System.Drawing.Size(887, 548);
-            this.Load += new System.EventHandler(this.frmGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gameContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

@@ -257,6 +257,12 @@ namespace GameStoreWinApp
             {
                 string updateId = (string)gameContainer.Rows[gameContainer.CurrentCell.RowIndex].Cells[0].Value;
 
+                if (gameLicenseRepository.GetGameLicenseByUserIDAndGameID(user.Id, updateId) != null)
+                {
+                    MessageBox.Show("You already have this game!");
+                    return;
+                }
+
                 if (updateId != null)
                 {
                     Game buyGame = gameRepository.GetGameById(updateId);
@@ -266,11 +272,9 @@ namespace GameStoreWinApp
                     {
                         GameLicense GameLicenseObject = previewGameLicense.GetGameLicenseObject();
 
-                        //TODO: add create later
-
-                        //bool createRes = gameLicenseRepository.(GameLicenseObject);
-                        //if (createRes) MessageBox.Show("Update successfully");
-                        //else MessageBox.Show("Failed to update");
+                        bool createRes = gameLicenseRepository.CreateGameLicense(GameLicenseObject);
+                        if (createRes) MessageBox.Show("Create successfully");
+                        else MessageBox.Show("Failed to create");
                     }
                 }
             }
@@ -298,11 +302,9 @@ namespace GameStoreWinApp
                     {
                         GameLicense GameLicenseObject = previewGameLicense.GetGameLicenseObject();
 
-                        //TODO: add create later
-
-                        //bool createRes = gameLicenseRepository.(GameLicenseObject);
-                        //if (createRes) MessageBox.Show("Update successfully");
-                        //else MessageBox.Show("Failed to update");
+                        bool createRes = gameLicenseRepository.CreateGameLicense(GameLicenseObject);
+                        if (createRes) MessageBox.Show("Create successfully");
+                        else MessageBox.Show("Failed to create");
                     }
                 }
             }

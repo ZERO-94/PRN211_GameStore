@@ -80,10 +80,5 @@ namespace GameStoreWinApp
             frmGame1.SetUser(user);
             frmGame1.load();
         }
-
-        private void frmGame1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

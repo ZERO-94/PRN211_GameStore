@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbUnitInStock = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +44,11 @@
             this.gameContainer = new System.Windows.Forms.DataGridView();
             this.lbId = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBuy = new System.Windows.Forms.Button();
             this.btnSendPresent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gameContainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUnitInStock
@@ -100,6 +103,7 @@
             this.txtLowerPrice.Name = "txtLowerPrice";
             this.txtLowerPrice.Size = new System.Drawing.Size(207, 23);
             this.txtLowerPrice.TabIndex = 28;
+            this.txtLowerPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtLowerPrice_Validating);
             // 
             // txtHigherPrice
             // 
@@ -107,6 +111,7 @@
             this.txtHigherPrice.Name = "txtHigherPrice";
             this.txtHigherPrice.Size = new System.Drawing.Size(207, 23);
             this.txtHigherPrice.TabIndex = 27;
+            this.txtHigherPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtHigherPrice_Validating);
             // 
             // txtName
             // 
@@ -225,9 +230,10 @@
             this.Controls.Add(this.updateGame);
             this.Controls.Add(this.gameContainer);
             this.Name = "frmGame";
-            this.Size = new System.Drawing.Size(776, 411);
+            this.Size = new System.Drawing.Size(887, 548);
             this.Load += new System.EventHandler(this.frmGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gameContainer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +258,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.Button btnSendPresent;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

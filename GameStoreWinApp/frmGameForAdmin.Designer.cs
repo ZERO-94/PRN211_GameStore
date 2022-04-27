@@ -44,7 +44,6 @@
             this.addBtn_Game = new System.Windows.Forms.Button();
             this.quitBtn_Game = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbOperation = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +104,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(241, 27);
             this.txtName.TabIndex = 7;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // label4
@@ -178,21 +176,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lbOperation
-            // 
-            this.lbOperation.AutoSize = true;
-            this.lbOperation.Location = new System.Drawing.Point(369, 27);
-            this.lbOperation.Name = "lbOperation";
-            this.lbOperation.Size = new System.Drawing.Size(45, 20);
-            this.lbOperation.TabIndex = 15;
-            this.lbOperation.Text = "Label";
-            // 
             // frmGameForAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lbOperation);
             this.Controls.Add(this.quitBtn_Game);
             this.Controls.Add(this.addBtn_Game);
             this.Controls.Add(this.txtStatus);
@@ -233,6 +221,5 @@
         private System.Windows.Forms.Button addBtn_Game;
         private System.Windows.Forms.Button quitBtn_Game;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lbOperation;
     }
 }

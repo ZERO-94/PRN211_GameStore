@@ -90,13 +90,11 @@ namespace GameStoreWinApp
 
             if (operationType.Equals("create"))
             {
-                //show all
-                lbOperation.Text = "CREATE GAME";
+
             }
             else if (operationType.Equals("update"))
             {
                 //hide id and password
-                lbOperation.Text = "UPDATE GAME: ID  " + game.Id;
                 txtId.ReadOnly = true;
 
                 //load data
@@ -169,11 +167,6 @@ namespace GameStoreWinApp
                 e.Cancel = false;
                 errorProvider1.SetError(txtPrice, null);
             }
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtName_Validating(object sender, CancelEventArgs e)

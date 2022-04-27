@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataAccess"
+    "\\DataAccess",
+    "\\GameStoreWinApp"
   ],
-  "SelectedNode": "\\DataAccess\\UserDAO.cs",
+  "SelectedNode": "\\GameStoreWinApp\\frmGameLicense.cs",
   "PreviewInSolutionExplorer": false
 }

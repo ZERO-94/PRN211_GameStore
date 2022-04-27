@@ -132,6 +132,20 @@ public class GameDAO
         }
     }
 
+    public List<string> GetGameIdList()
+    {
+        using (context = new GameStoreDBContext())
+        {
+            var gameList = GetAllGames();
+            List<string> gameIdList = new List<string>();
+            foreach (Game game in gameList)
+            {
+                gameIdList.Add(game.Id);
+            }
+            return gameIdList;
+        }
+    }
+
     public List<Game> GetFilteredGameByName(string searchKey, List<Game> games)
     {
         return games.FindAll(g => g.Name.ToUpper().Contains(searchKey.ToUpper()));

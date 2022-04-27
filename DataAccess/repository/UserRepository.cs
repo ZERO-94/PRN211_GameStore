@@ -26,5 +26,7 @@ namespace DataAccess.repository
         public bool ActiveAccount(string id) => userDAO.ActivateAccount(id);
 
         public User CheckLogin(string email, string password) => userDAO.CheckLogin(email, password);
+
+        public List<string> GetUserIdList() => userDAO.GetUserIdList();
     }
 }
